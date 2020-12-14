@@ -16,5 +16,18 @@
 
 <body>
     <div id="content">
-        <header>
-        </header>
+    <header id="header"> 
+         <h1 class="header__title"><a href="#">L.WEB DESIGN</a></h1>
+        
+        <nav class="header__nav">
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul class="header__list">
+                <li><a href="#">TOP</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SERVICE</a></li>
+                <li><a href="#"><span class="header__list--icon"></span>CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
