@@ -9,6 +9,7 @@ Version: *** バージョン (今日の日付等: 20200811)***
 
 @charset "utf-8";
 @media (min-width: 1000px) {
+    //ヘッダー用css
     #header{
         position: fixed;
         display: flex;
@@ -38,9 +39,66 @@ Version: *** バージョン (今日の日付等: 20200811)***
                 list-style: none;
                 margin-right: 10%;
             }
+            & a{
+                text-decoration: none;
+                color: white;
+            }
         }
-        & a{
-            text-decoration: none;
-            color: white;
-        }
+        
+
+
+
+
+
+
+
+
+
+    //フッター用css
+    #footer{
+            position: relative;
+            width: 100%;
+            height: 8vh;
+            background-color: #2B7270;
+            & .footer__box{
+                position: absolute;
+                width: 33%;
+                height: 25%;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%) translateX(-50%);
+            }
+            & .footer__list{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            & li{
+                font-size: 1.2vw;
+                list-style: none;
+                &:nth-child(1){
+                   margin-right: 15%; 
+                }
+                &:nth-child(3){
+                    margin-left: 15%;
+                }
+                &:nth-child(4){
+                    margin-left: 15%;
+                }
+            }
+            & a{
+                text-decoration: none;
+                color: white;
+            }
+            & .footer__copyright{
+                color: white;
+                position: absolute;
+                top: 52%;
+                font-size: 1.1vw;
+                left: 10%;
+                transform: translateY(-50%) translateX(-50%);
+            }
+    }
 }
