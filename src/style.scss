@@ -7,7 +7,40 @@ Author URI: *** 開発者のWebサイト(仮で良いです。) ***
 Version: *** バージョン (今日の日付等: 20200811)***
 ---------------------------------------------------------*/
 
-@charset "UTF8";
-body {
-    background-image: test;
+@charset "utf-8";
+@media (min-width: 1000px) {
+    #header{
+        position: fixed;
+        display: flex;
+        width: 100%;
+        height: 7vh;
+        background-color: gray;
+        & .header__title{
+            position: absolute;
+            font-size: 2.5vw;
+            top: 50%;
+            transform: translateY(-50%) translateX(5%);
+            color: white;
+        }
+        & .header__nav{
+            position: absolute;
+            right: 0%;
+            width: 30%;
+            top: 50%;
+            transform: translateY(-50%) translateX(5%);
+        }
+        & .header__list{
+            display: flex;
+            width: 100%;
+        }
+            & li{
+                font-size: 1.2vw;
+                list-style: none;
+                margin-right: 10%;
+            }
+        }
+        & a{
+            text-decoration: none;
+            color: white;
+        }
 }
