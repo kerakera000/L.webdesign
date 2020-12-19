@@ -9,13 +9,24 @@ Version: *** バージョン (今日の日付等: 20200811)***
 
 @charset "utf-8";
 @media (min-width: 1000px) {
-    //ヘッダー用css
+    body{
+        font-family: 'fantasy';
+        color: #000;
+        line-height: 1.3;
+        letter-spacing: 0.01em;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        word-break: break-all;
+        overflow-x: hidden;
+    }
+    //ヘッダーcss
     #header{
+        z-index: 900;
         position: fixed;
         display: flex;
         width: 100%;
         height: 7vh;
-        background-color: gray;
         & .header__title{
             position: absolute;
             font-size: 2.5vw;
@@ -44,8 +55,69 @@ Version: *** バージョン (今日の日付等: 20200811)***
                 color: white;
             }
         }
-        
-
+    //TOP title
+    #section1{
+        width: 100%;
+        height: 100vh;
+        background-image: url(./img/img-top.jpg);
+        background-repeat: no-repeat;
+        position: relative;
+        background-size: 100%;
+        //タイトルcss
+        & .section1__titlebox{
+            width: 25%;
+            height: 5vw;
+            position: absolute;
+            top: 30%;
+            left: 7%;
+        }
+        & .section1__title{
+            position: absolute;
+            top: 0%;
+            font-size: 3vw;
+            color: white;
+            left: 3%;
+        }
+        & .section1__underline{
+            position: absolute;
+            height: 1px;
+            width: 100%;
+            background-color: white;
+            top: 63%;
+        }
+        & .section1__text{
+            position: absolute;
+            font-size: 1.3vw;
+            color: white;
+            bottom: 7%;
+            left: 14%;
+        }
+        //マウススクロールcss
+        & .section1__mousebox{
+            position: absolute;
+            width: 6%;
+            height: 16.2vw;
+            top: 44%;
+            left: 16%;
+        }
+        & .section1__line{
+            position: absolute;
+            width: 1px;
+            height: 13vw;
+            left: 49%;
+            background-color: white;
+        }
+        & .section1__mouseicon{
+            position: absolute;
+            width: 55%;
+            height: 21%;
+            bottom: 0%;
+            left: 22%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url(./img/img-mouse-icon.png);
+        }
+    }
 
 
 
