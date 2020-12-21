@@ -389,6 +389,34 @@ Version: *** バージョン (今日の日付等: 20200811)***
             color: white;
         }
     }
+    //お知らせ
+    #section6{
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
+        height: 35vw;
+        & .section6__title{
+            padding-top: 4vw;
+            height: 6vw;
+        }
+        & .section6__subtitle{
+            height: 2vw;
+        }
+        & .section6__notification-box{
+            overflow:auto;
+            width:30vw; 
+            height:22vw;
+		    padding:1vw;
+		    color:black;
+		    background-color:white;
+            line-height:1.5em;
+            text-align: center;
+            display: inline-block;
+            border-bottom: 1px solid #555;
+            border-top: 1px solid #555;
+        }
+    }
 
      //フッターcss
      #footer{
