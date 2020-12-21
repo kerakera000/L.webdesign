@@ -19,6 +19,25 @@ Version: *** バージョン (今日の日付等: 20200811)***
         box-sizing: border-box;
         word-break: break-all;
         overflow-x: hidden;
+         
+    }
+    #mainbody{
+        text-align: center;
+        line-height: 2vw;
+        letter-spacing: 0.08vw;
+    }
+    h1,h2,h3,h4,h5,p,span{
+        margin: 0%;
+        padding: 0%;
+    }
+    h2{
+        font-size: 2vw;
+    }
+    h3{
+        font-size: 1.1vw;
+    }
+    p{
+        font-size: 1vw;
     }
     //ヘッダーcss
     #header{
@@ -46,7 +65,7 @@ Version: *** バージョン (今日の日付等: 20200811)***
             width: 100%;
         }
             & li{
-                font-size: 1.2vw;
+                font-size: 1.1vw;
                 list-style: none;
                 margin-right: 9%;
             }
@@ -59,10 +78,10 @@ Version: *** バージョン (今日の日付等: 20200811)***
     #section1{
         width: 100%;
         height: 100vh;
-        background-image: url(./img/img-top.jpg);
+        background-image: url(images/img-top.jpg);
         background-repeat: no-repeat;
         position: relative;
-        background-size: 100%;
+        background-size: cover;
         //タイトルcss
         & .section1__titlebox{
             width: 25%;
@@ -103,9 +122,10 @@ Version: *** バージョン (今日の日付等: 20200811)***
         & .section1__line{
             position: absolute;
             width: 1px;
-            height: 13vw;
+            height: 9vw;
             left: 49%;
             background-color: white;
+            top: 4vw;
         }
         & .section1__mouseicon{
             position: absolute;
@@ -115,7 +135,183 @@ Version: *** バージョン (今日の日付等: 20200811)***
             left: 22%;
             background-repeat: no-repeat;
             background-size: contain;
-            background-image: url(./img/img-mouse-icon.png);
+            background-image: url(images/img-mouse-icon.png);
+        }
+    }
+    //サービス内容css
+    #section2{
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
+        height: 76vw;
+        //最初のタイトルとサービス説明css
+        & .section2__title{
+            padding-top: 4vw;
+            height: 6vw;
+        }
+        & .section2__subtitle{
+            height: 2vw;
+        }
+        & .section2__Brief-introduction{
+            padding-top: 3vw;
+            height: 19vw;
+        }
+        //お問い合わせリンク
+        & .section2__Contact-Us-box{
+            width: 100%;
+            height: 9.5vw;
+            text-align: center;
+            padding: 3vw 0;
+            & .section2__Contact-Us-text{
+                width: 20%;
+                height: 100%;
+                display: inline-block;
+                background-color: #555;
+                position: relative;
+            }
+            & a{
+                width: 100%;
+                text-decoration: none;
+                color: white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%) translateX(-50%);
+            }
+        }
+
+        //サービス内容大箱
+        & .section2__service-Contents{
+            width: 100%;
+            height: 30vw;
+            padding: 3vw 5vw 0%;
+            display: inline-flex;
+            justify-content: space-around;
+        }
+        //サービス内容box3つのcss
+        & .section2__service-Contents--box1{
+            width: 33%;
+            height: 100%;
+            display: inline-block;
+            & .section2__service-Contents--icon1{
+                width: 14vw;
+                height: 15vw;
+                background-image: url(images/img-service1.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                display: inline-block;
+            }
+            & .section2__service-Contents--text1{
+                width: 90%;
+                display: inline-block;
+            }
+        }
+        & .section2__service-Contents--box2{
+            width: 33%;
+            height: 100%;
+            display: inline-block;
+            & .section2__service-Contents--icon2{
+                width: 14vw;
+                height: 15vw;
+                background-image: url(images/img-service2.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                display: inline-block;
+            }
+            & .section2__service-Contents--text2{
+                width: 90%;
+                display: inline-block;
+            }
+        }
+        & .section2__service-Contents--box3{
+            width: 33%;
+            height: 100%;
+            display: inline-block;
+            & .section2__service-Contents--icon3{
+                width: 14vw;
+                height: 15vw;
+                background-image: url(images/img-service3.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                display: inline-block;
+            }
+            & .section2__service-Contents--text3{
+                width: 90%;
+                display: inline-block;
+            }
+        }
+
+        //サービス内容詳細のリンク
+        & .section2__service-link-box{
+            width: 100%;
+            height: 9.5vw;
+            text-align: center;
+            padding: 3vw 0;
+            & .section2__service-link-text{
+                width: 20%;
+                height: 100%;
+                display: inline-block;
+                background-color: #555;
+                position: relative;
+            }
+            & a{
+                width: 100%;
+                text-decoration: none;
+                color: white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%) translateX(-50%);
+            }
+        }
+    }
+
+     //フッターcss
+     #footer{
+        position: relative;
+        width: 100%;
+        height: 8vh;
+        background-color: #2B7270;
+        & .footer__box{
+            position: absolute;
+            width: 33%;
+            height: 25%;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+        }
+        & .footer__list{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        & li{
+            font-size: 1.2vw;
+            list-style: none;
+            &:nth-child(1){
+               margin-right: 15%; 
+            }
+            &:nth-child(3){
+                margin-left: 15%;
+            }
+            &:nth-child(4){
+                margin-left: 15%;
+            }
+        }
+        & a{
+            text-decoration: none;
+            color: white;
+        }
+        & .footer__copyright{
+            color: white;
+            position: absolute;
+            top: 52%;
+            font-size: 1.1vw;
+            left: 10%;
+            transform: translateY(-50%) translateX(-50%);
         }
     }
 
@@ -126,51 +322,14 @@ Version: *** バージョン (今日の日付等: 20200811)***
 
 
 
-    //フッター用css
-    #footer{
-            position: relative;
-            width: 100%;
-            height: 8vh;
-            background-color: #2B7270;
-            & .footer__box{
-                position: absolute;
-                width: 33%;
-                height: 25%;
-                top: 50%;
-                left: 50%;
-                transform: translateY(-50%) translateX(-50%);
-            }
-            & .footer__list{
-                width: 100%;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            & li{
-                font-size: 1.2vw;
-                list-style: none;
-                &:nth-child(1){
-                   margin-right: 15%; 
-                }
-                &:nth-child(3){
-                    margin-left: 15%;
-                }
-                &:nth-child(4){
-                    margin-left: 15%;
-                }
-            }
-            & a{
-                text-decoration: none;
-                color: white;
-            }
-            & .footer__copyright{
-                color: white;
-                position: absolute;
-                top: 52%;
-                font-size: 1.1vw;
-                left: 10%;
-                transform: translateY(-50%) translateX(-50%);
-            }
-    }
+
+
+
+
+
+
+
+
+
+
 }
