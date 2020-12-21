@@ -76,6 +76,20 @@
         </div>
 
     </div>
+
+    <div id="section3">
+        <div class="section3__box"></div>
+        <h2 class="section3__title">ABOUT</h2>
+        <h3 class="section3__sub-title">事業概要</h3>
+        <p class="section3__text--1">事業携帯： 個人事業主</p>
+        <p class="section3__text--2">事業内容： ウェブサイト制作</p>
+        <p class="section3__text--3">住所： 埼玉県さいたま市</p>
+        <p class="section3__text--4">ITグループ WillMake-inc会員</p>
+        <div class="section3__link-box">
+            <p class="section3__link-text"><a href="#">詳細</a></p>
+        </div>
+    </div>
+    
 </div>
 
 <?php get_footer(); ?>
