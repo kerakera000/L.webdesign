@@ -359,7 +359,36 @@ Version: *** バージョン (今日の日付等: 20200811)***
         height: 35vw;
         background-color: #555;
     }
-    
+    //お問い合わせ
+    #section5{
+        width: 100%;
+        height: 35vw;
+        margin: 4.5vw 0;
+        position: relative;
+        & .section5__box{
+            background-color: #2B7270;
+            width: 100%;
+            height: 100%;
+            transform: skewY(-5deg);
+        }
+        & .section5__title{
+            height: 3vw;
+            padding-top: 1vw;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            color: white;
+        }
+        & .section5__sub-title{
+            height: 2vw;
+            position: absolute;
+            top: 27%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            color: white;
+        }
+    }
 
      //フッターcss
      #footer{

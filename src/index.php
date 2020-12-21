@@ -93,7 +93,12 @@
     <div id="section4">
         <div></div>
     </div>
-    
+
+    <div id="section5">
+        <div class="section5__box"></div>
+        <h2 class="section5__title">CONTACT</h2>
+        <h3 class="section5__sub-title">お問い合わせ</h3>
+    </div>
 </div>
 
 <?php get_footer(); ?>
