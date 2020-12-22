@@ -89,7 +89,25 @@
             <p class="section3__link-text"><a href="#">詳細</a></p>
         </div>
     </div>
-    
+
+    <div id="section4">
+        <h2 class="section4__title">WORKS</h2>
+        <h3 class="section4__sub-title">実績</h3>
+    </div>
+
+    <div id="section5">
+        <div class="section5__box"></div>
+        <h2 class="section5__title">CONTACT</h2>
+        <h3 class="section5__sub-title">お問い合わせ</h3>
+    </div>
+
+    <div id="section6">
+        <h2 class="section6__title">notification</h2>
+        <h3 class="section6__subtitle">お知らせ</h3>
+        <div class="section6__notification-box">
+            2020/12/31　ホームページを公開しました。<br>
+        </div>
+    </div>
 </div>
 
 <?php get_footer(); ?>
