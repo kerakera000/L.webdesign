@@ -91,7 +91,8 @@
     </div>
 
     <div id="section4">
-        <div></div>
+        <h2 class="section4__title">WORKS</h2>
+        <h3 class="section4__sub-title">実績</h3>
     </div>
 
     <div id="section5">
