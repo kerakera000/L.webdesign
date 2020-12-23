@@ -64,7 +64,7 @@ Version: *** バージョン (今日の日付等: 20200811)***
   #header .header__nav {
     position: absolute;
     right: 0%;
-    width: 30%;
+    width: 33%;
     top: 50%;
     -webkit-transform: translateY(-50%) translateX(5%);
             transform: translateY(-50%) translateX(5%);
@@ -79,10 +79,41 @@ Version: *** バージョン (今日の日付等: 20200811)***
     font-size: 1.1vw;
     list-style: none;
     margin-right: 9%;
+    margin-top: 0.8vw;
+  }
+  #header li:nth-child(1) {
+    display: none;
+  }
+  #header li:nth-child(5) {
+    width: 9vw;
+    height: 3vw;
+    position: relative;
+    margin-right: 6%;
+    background-color: #2b7270;
+    margin-top: 0%;
   }
   #header a {
     text-decoration: none;
     color: white;
+  }
+  #header .heade__list--text {
+    position: absolute;
+    top: 50%;
+    left: 28%;
+    -webkit-transform: translateY(-50%) translateX(5%);
+            transform: translateY(-50%) translateX(5%);
+  }
+  #header .header__list--icon {
+    width: 2vw;
+    height: 1.5vw;
+    background-image: url(./img/img-contact-icon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 45%;
+    left: -40%;
+    -webkit-transform: translateY(-50%) translateX(5%);
+            transform: translateY(-50%) translateX(5%);
   }
   #section1 {
     width: 100%;

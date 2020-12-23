@@ -52,33 +52,63 @@ Version: *** バージョン (今日の日付等: 20200811)***
         width: 100%;
         height: 7vh;
         & .header__title {
-            position: absolute;
-            font-size: 2.5vw;
-            top: 50%;
-            transform: translateY(-50%) translateX(5%);
-            color: white;
+          position: absolute;
+          font-size: 2.5vw;
+          top: 50%;
+          transform: translateY(-50%) translateX(5%);
+          color: white;
         }
         & .header__nav {
-            position: absolute;
-            right: 0%;
-            width: 30%;
-            top: 50%;
-            transform: translateY(-50%) translateX(5%);
+          position: absolute;
+          right: 0%;
+          width: 33%;
+          top: 50%;
+          transform: translateY(-50%) translateX(5%);
         }
         & .header__list {
-            display: flex;
-            width: 100%;
+          display: flex;
+          width: 100%;
         }
         & li {
-            font-size: 1.1vw;
-            list-style: none;
-            margin-right: 9%;
+          font-size: 1.1vw;
+          list-style: none;
+          margin-right: 9%;
+          margin-top: 0.8vw;
+          &:nth-child(1){
+            display: none;
+          }
+          &:nth-child(5){
+            width: 9vw;
+            height: 3vw;
+            position: relative;
+            margin-right: 6%;
+            background-color: #2b7270;
+            margin-top: 0%;
+          }
         }
         & a {
-            text-decoration: none;
-            color: white;
+          text-decoration: none;
+          color: white;
         }
-    }
+        & .heade__list--text{
+          position: absolute;
+          top: 50%;
+          left: 28%;
+          transform: translateY(-50%) translateX(5%);
+        }
+        & .header__list--icon{
+          width: 2vw;
+          height: 1.5vw;
+          background-image: url(./img/img-contact-icon.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          position: absolute;
+          top: 45%;
+          left: -40%;
+          transform: translateY(-50%) translateX(5%)
+        }
+        
+      }
     //TOP title
     #section1 {
         width: 100%;
