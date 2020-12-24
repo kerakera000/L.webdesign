@@ -674,6 +674,41 @@
       }
   }
 
+  //お問い合わせ
+  #section9{
+    width: 100%;
+    height: 160vw;
+    background-image: url(images/img-contact.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+    background-position: center left 40%;
+  }
+
+  //お問い合わせtitleとフォーム
+  #section10{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 140vw;
+    & .section10__title {
+      padding-top: 4vw;
+      height: 9vw;
+    }
+    & .section10__subtitle {
+      height: 2vw;
+    }
+    & .section10__text{
+      padding-top: 10vw;
+      height: 35vw;
+      width: 60vw;
+      display: inline-block;
+    }
+  }
+
+
+
 //フッターcss
 #footer {
     position: relative;
