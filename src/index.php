@@ -13,7 +13,7 @@
     </div>
 <div id="mainbody"> 
     <div id="section2">
-        <h2 class="section2__title">SERVICE</h2>
+        <h2 class="section2__title">SERVICE.</h2>
         <h3 class="section2__subtitle">サービス内容</h3>
 
         <p class="section2__Brief-introduction">
@@ -79,7 +79,7 @@
 
     <div id="section3">
         <div class="section3__box"></div>
-        <h2 class="section3__title">ABOUT</h2>
+        <h2 class="section3__title">ABOUT.</h2>
         <h3 class="section3__sub-title">事業概要</h3>
         <p class="section3__text--1">事業携帯： 個人事業主</p>
         <p class="section3__text--2">事業内容： ウェブサイト制作</p>
@@ -91,18 +91,18 @@
     </div>
 
     <div id="section4">
-        <h2 class="section4__title">WORKS</h2>
+        <h2 class="section4__title">WORKS.</h2>
         <h3 class="section4__sub-title">実績</h3>
     </div>
 
     <div id="section5">
         <div class="section5__box"></div>
-        <h2 class="section5__title">CONTACT</h2>
+        <h2 class="section5__title">CONTACT.</h2>
         <h3 class="section5__sub-title">お問い合わせ</h3>
     </div>
 
     <div id="section6">
-        <h2 class="section6__title">notification</h2>
+        <h2 class="section6__title">NOTIFICATION.</h2>
         <h3 class="section6__subtitle">お知らせ</h3>
         <div class="section6__notification-box">
             2020/12/31　ホームページを公開しました。<br>
