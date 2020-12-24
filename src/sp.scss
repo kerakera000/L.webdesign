@@ -474,6 +474,205 @@
     }
   }
 
+  //事業内容の詳細ページのcss
+  #section7{
+    width: 100%;
+    height: 160vw;
+    background-image: url(./img/img-about-top.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+    background-position: center left 40%;
+  }
+  //事業内容の詳細css-2
+  #section8{
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+      height: 270vw;
+      //最初のタイトルとサービス説明css
+      & .section8__title {
+        padding-top: 4vw;
+        height: 6vw;
+      }
+      //メッセージcss
+      & .section8__message{
+        padding-top: 2vw;
+        height: 6vw;
+      }
+      & .section8__profile-box{
+        width: 100%;
+        height: 120vw;
+        margin-top: 1vw;
+      }
+      & .section8__profile-img--box{
+        width: 1000%;
+        height: 50%;
+        position: relative;
+      }
+      & .section8__profile-img{
+        width: 45vw;
+        height: 45vw;
+        background-image: url(./img/img-profile.JPG);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center left 75%;
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        border-radius: 50%;
+        transform: translateY(-50%) translateX(-50%) rotate(15deg);
+      }
+      & .section8__profile--text{
+        width: 100%;
+        height: 50%;
+        text-align: center;
+        padding: 0 10vw;
+      }
+      & .section8__Business-content{
+        height: 2vw;
+        margin-top: 3vw;
+      }
+      & .section8__Business-content-box{
+        border-bottom: 1.5px dashed #555;
+        border-top: 1.5px dashed #555;
+        height: 113vw;
+        width: 100%;
+        max-width: 950px;
+        margin-top: 3vw;
+        display: inline-block;
+        position: relative;
+        & .section8__Business-content-box--text1{
+          position: absolute;
+          bottom: 3%;
+          left: 3%;
+        }
+        & .section8__Business-content-box--text2{
+          position: absolute;
+          bottom: 3.5%;
+          left:42%;
+        }
+      }
+
+      & .section8__Business-content-box1{
+        border-bottom: 1.5px dashed #555;
+        height: 15vw;
+        width: 100%;
+        display: inline-block;
+        position: relative;
+        & .section8__Business-content-box1--text1{
+          position: absolute;
+          bottom: 27%;
+          left: 3%;
+        }
+        & .section8__Business-content-box1--text2{
+          position: absolute;
+          bottom: 27%;
+          left: 42%;
+        }
+      }
+      & .section8__Business-content-box2{
+        border-bottom: 1.5px dashed #555;
+        height: 15vw;
+        width: 100%;
+        display: inline-block;
+        position: relative;
+        & .section8__Business-content-box2--text1{
+          position: absolute;
+          bottom: 27%;
+          left: 3%;
+        }
+        & .section8__Business-content-box2--text2{
+          position: absolute;
+          bottom: 27%;
+          left: 42%;
+        }
+      }
+      & .section8__Business-content-box3{
+        border-bottom: 1.5px dashed #555;
+        height: 15vw;
+        width: 100%;
+        display: inline-block;
+        position: relative;
+        & .section8__Business-content-box3--text1{
+          position: absolute;
+          bottom: 27%;
+          left: 3%;
+        }
+        & .section8__Business-content-box3--text2{
+          position: absolute;
+          bottom: 50%;
+          left: 42%;
+        }
+        & .section8__Business-content-box3--text3{
+          position: absolute;
+          bottom: 10%;
+          left: 42%;
+        }
+      }
+      & .section8__Business-content-box4{
+        border-bottom: 1.5px dashed #555;
+        height: 15vw;
+        width: 100%;
+        display: inline-block;
+        position: relative;
+        & .section8__Business-content-box4--text1{
+          position: absolute;
+          bottom: 27%;
+          left: 3%;
+        }
+        & .section8__Business-content-box4--text2{
+          position: absolute;
+          bottom: 50%;
+          left: 42%;
+        }
+        & .section8__Business-content-box4--text3{
+          position: absolute;
+          bottom: 10%;
+          left: 42%;
+        }
+      }
+      & .section8__Business-content-box5{
+        border-bottom: 1.5px dashed #555;
+        height: 15vw;
+        width: 100%;
+        display: inline-block;
+        position: relative;
+        & .section8__Business-content-box5--text1{
+          position: absolute;
+          bottom: 27%;
+          left: 3%;
+        }
+        & .section8__Business-content-box5--text2{
+          position: absolute;
+          bottom: 50%;
+          left: 42%;
+        }
+        & .section8__Business-content-box5--text3{
+          position: absolute;
+          bottom: 10%;
+          left: 42%;
+        }
+      }
+      & .section8__Business-content-box6{
+        border-bottom: 1.5px dashed #555;
+        height: 15vw;
+        width: 100%;
+        display: inline-block;
+        position: relative;
+        & .section8__Business-content-box6--text1{
+          position: absolute;
+          bottom: 27%;
+          left: 3%;
+        }
+        & .section8__Business-content-box6--text2{
+          position: absolute;
+          bottom: 27%;
+          left: 42%;
+        }
+      }
+  }
 
 //フッターcss
 #footer {
