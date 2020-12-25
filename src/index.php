@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div id="section1">
+<div id="top" class="section1">
         <div class="section1__titlebox">
             <h2 class="section1__title">L.WEB DESIGN</h2>
             <div class="section1__underline"></div>

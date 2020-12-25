@@ -11,24 +11,38 @@
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/sp.css">
 
+    <script src="<?php echo get_stylesheet_directory_uri(); ?>https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="<?php echo get_stylesheet_directory_uri(); ?>/https://unpkg.com/vue@2.2.4"></script>
+    <script src="<?php echo get_stylesheet_directory_uri(); ?>/https://unpkg.com/vue-scrollto"></script>
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/main.min.js"></script>
     <?php wp_head(); ?>
 </head>
 
 <body>
-    <div id="content">
-    <header id="header"> 
-         <h1 class="header__title"><a href="#">L.WEB DESIGN</a></h1>
+
+
+        <header id="app" class="header" v-scroll="handleScroll" > 
+            <h1 class="header__title"><a href="#">L.WEB DESIGN</a></h1>
         
-        <nav class="header__nav">
-            <span></span>
-            <span></span>
-            <span></span>
-            <ul class="header__list">
-                <li><a href="#">TOP</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">SERVICE</a></li>
-                <li><a href="#"><span class="header__list--icon"></span>CONTACT</a></li>
-            </ul>
-        </nav>
-    </header>
+            <nav class="header__nav">
+                <div class="header__nav-button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+            </div>
+                <div class="header__list-box"> 
+                    <ul class="header__list">
+                        <li><a href="#">MENU</a></li>
+                        <li><a href="#">TOP</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">SERVICE</a></li>
+                        <li><a class="heade__list--text" href="#"><span class="header__list--icon"></span>CONTACT</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="header__jump-button" v-scroll="jumpbutton" v-scroll-to="'#top'">
+                <span></span>
+            </div>
+
+        </header>
