@@ -11,16 +11,10 @@
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/sp.css">
 
-    <script src="<?php echo get_stylesheet_directory_uri(); ?>https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <script src="<?php echo get_stylesheet_directory_uri(); ?>/https://unpkg.com/vue@2.2.4"></script>
-    <script src="<?php echo get_stylesheet_directory_uri(); ?>/https://unpkg.com/vue-scrollto"></script>
-    <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/main.min.js"></script>
     <?php wp_head(); ?>
 </head>
 
 <body>
-
-
         <header id="app" class="header" v-scroll="handleScroll" > 
             <h1 class="header__title"><a href="#">L.WEB DESIGN</a></h1>
         
