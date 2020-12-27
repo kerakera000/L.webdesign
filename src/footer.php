@@ -10,7 +10,11 @@
     </footer>
     <p class="footer__copyright">COPYRIGHT © L.WEB DESIGN</p>
     </div>
-
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue@2.2.4"></script>
+    <script src="https://unpkg.com/vue-scrollto"></script>
+    <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/main.js"></script>
 <?php wp_footer(); ?>
 </body>
 

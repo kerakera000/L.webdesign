@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
-<div id="section1">
+<div id="mainbody"> 
+    <div id="top" class="section1">
         <div class="section1__titlebox">
             <h2 class="section1__title">L.WEB DESIGN</h2>
             <div class="section1__underline"></div>
@@ -11,7 +12,7 @@
             <div class="section1__mouseicon"></div>
         </div>
     </div>
-<div id="mainbody"> 
+
     <div id="section2">
         <h2 class="section2__title">SERVICE.</h2>
         <h3 class="section2__subtitle">サービス内容</h3>
