@@ -189,7 +189,7 @@
     }
     & .section1__title{
         position: absolute;
-        top: 11%;
+        top: 1.5vw;
         font-size: 6vw;
         color: white;
         left: 3%;
@@ -199,14 +199,14 @@
         height: 1px;
         width: 100%;
         background-color: white;
-        top: 61%;
+        top: 7vw;
     }
     & .section1__text {
         position: absolute;
         font-size: 3vw;
         color: white;
-        bottom: 2%;
-        left: 10%;
+        bottom: -1vw;
+        left: 2.5vw;
     }
     //マウススクロールcss
     & .section1__mousebox {
@@ -294,8 +294,8 @@
             height: 100%;
             display: inline-block;
             & .section2__service-Contents--icon1 {
-                width: 14vw;
-                height: 15vw;
+                width: 20vw;
+                height: 20vw;
                 background-image: url(./img/img-service1.png);
                 background-repeat: no-repeat;
                 background-size: contain;
@@ -311,8 +311,8 @@
             height: 100%;
             display: inline-block;
             & .section2__service-Contents--icon2 {
-                width: 14vw;
-                height: 15vw;
+                width: 20vw;
+                height: 20vw;
                 background-image: url(./img/img-service2.png);
                 background-repeat: no-repeat;
                 background-size: contain;
@@ -328,8 +328,8 @@
             height: 100%;
             display: inline-block;
             & .section2__service-Contents--icon3 {
-                width: 14vw;
-                height: 15vw;
+                width: 20vw;
+                height: 20vw;
                 background-image: url(./img/img-service3.png);
                 background-repeat: no-repeat;
                 background-size: contain;
@@ -480,7 +480,7 @@
     //お問い合わせ
     #section5 {
         width: 100%;
-        height: 135vw;
+        height: 280vw;
         margin: 4.5vw 0;
         position: relative;
         & .section5__box {
@@ -493,7 +493,7 @@
             height: 6vw;
             padding-top: 1vw;
             position: absolute;
-            top: 20%;
+            top: 5%;
             left: 50%;
             transform: translateY(-50%) translateX(-50%);
             color: white;
@@ -501,11 +501,101 @@
         & .section5__sub-title {
             height: 5vw;
             position: absolute;
-            top: 24%;
+            top: 9%;
             left: 50%;
             transform: translateY(-50%) translateX(-50%);
             color: white;
         }
+        & .section5__contact-box{
+            display: inline-block;
+            position: absolute;
+            top: 53%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            text-align: left;
+            /* デザインカスタマイズ */
+            div.wpcf7 {  
+                padding:0px; 
+                -moz-border-radius:10px; 
+                -khtml-border-radius:10px; 
+                -webkit-border-radius:10px; 
+                border-radius:10px; 
+                margin:0 0 30px 0; 
+            }
+            div.wpcf7 p { 
+                color: white; 
+                padding:20px 40px 0; 
+                margin:0; 
+                font-size:2vw; 
+            }
+            div.wpcf7 input, .wpcf7 textarea { 
+                border:1px solid white; 
+                padding:8px; 
+                font-size:14px; 
+                color: white;
+            }
+            div.wpcf7 textarea { 
+                width:97.5%; 
+                height:300px;
+                color: white; 
+            }
+            div.wpcf7 input.wpcf7-submit {
+               cursor:pointer; 
+               color:#fff; 
+               font-weight:bold; 
+               font-size:14px; 
+               width:200px; 
+               height:45px; 
+               margin:0 auto; 
+               display:block;
+               border-radius:5px;
+               background:#333; 
+               box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5), inset 0px 32px 0px -12px #808080; 
+               border:1px solid #666;
+            }
+            div.wpcf7 input.wpcf7-submit:hover { 
+                background:#006080; 
+                box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5), inset 0px 32px 0px -12px #007ea8; 
+                border:1px solid #006080; 
+            }
+            .wpcf7 input.wpcf7-submit:active { 
+                box-shadow:none; 
+                bottom:-2px; 
+                position:relative; 
+            }
+            .wpcf7 input:focus, .wpcf7 textarea:focus { 
+                border:1px solid #009de1; }
+            .wpcf7-captchac { 
+                border:1px solid white; 
+            }
+             
+             
+            /* エラー個所をわかりやすく表示 */
+            .wpcf7 .wpcf7-not-valid { 
+                background: #ffb6c1; 
+            }
+            .wpcf7 span.wpcf7-not-valid-tip {
+                font-size: 80%;
+            }
+            .wpcf7 .wpcf7-response-output {
+                text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); 
+                border-color: white;
+                color: white;
+                border-radius: 4px; }
+            .wpcf7 .wpcf7-validation-errors {
+                color: #B94A48; 
+                background-color: #F2DEDE; 
+                border: 1px solid #EED3D7;}
+            .wpcf7 .wpcf7-mail-sent-ok {
+                color: #3A87AD; 
+                background-color: #D9EDF7; 
+                border: 1px solid #BCE8F1;}
+             
+            /* 必須赤色表示 */
+            .wpcf7 .required { color: #f00;}
+            /* 任意緑色表示 */
+            .wpcf7 .any{ color: #080;}
+          }
     }
 
     //お知らせ
@@ -756,7 +846,7 @@
         position: relative;
         width: 100%;
         max-width: 1200px;
-        height: 140vw;
+        height: 50vw;
         & .section10__title {
             padding-top: 4vw;
             height: 9vw;
@@ -766,12 +856,45 @@
         }
         & .section10__text {
             padding-top: 10vw;
-            height: 35vw;
-            width: 60vw;
+            height: 40vw;
+            width: 62vw;
             display: inline-block;
         }
     }
 
+    //contact7お問い合わせフォーム内容
+    .section11 {
+        width: 100%;
+        display: inline-block;
+        /* デザインカスタマイズ */
+        div.wpcf7 {  padding:0px; -moz-border-radius:10px; -khtml-border-radius:10px; -webkit-border-radius:10px; border-radius:10px; margin:0 0 30px 0; }
+        div.wpcf7 p { padding:20px 20px 0; margin:0; font-size:11px; }
+        div.wpcf7 input, .wpcf7 textarea { border:1px solid #ccc; padding:8px; font-size:14px; }
+        div.wpcf7 textarea { width:97.5%; height:300px; }
+        div.wpcf7 input.wpcf7-submit {
+           cursor:pointer; color:#fff; font-weight:bold; font-size:14px; width:200px; height:45px; margin:0 auto; display:block;
+           -moz-border-radius:5px; -khtml-border-radius:5px; -webkit-border-radius:5px; border-radius:5px;
+           background:#333; box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5), inset 0px 32px 0px -12px #808080; border:1px solid #666;
+        }
+        div.wpcf7 input.wpcf7-submit:hover { background:#006080; box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5), inset 0px 32px 0px -12px #007ea8; border:1px solid #006080; }
+        .wpcf7 input.wpcf7-submit:active { box-shadow:none; bottom:-2px; position:relative; }
+        .wpcf7 input:focus, .wpcf7 textarea:focus { border:1px solid #009de1; }
+        .wpcf7-captchac { border:1px solid #ccc; }
+         
+         
+        /* エラー個所をわかりやすく表示 */
+        .wpcf7 .wpcf7-not-valid { background: #ffb6c1; }
+        .wpcf7 span.wpcf7-not-valid-tip {font-size: 80%;}
+        .wpcf7 .wpcf7-response-output {margin: 10px 0 0; padding: 8px 35px 8px 14px; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+            -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
+        .wpcf7 .wpcf7-validation-errors {color: #B94A48; background-color: #F2DEDE; border: 1px solid #EED3D7;}
+        .wpcf7 .wpcf7-mail-sent-ok {color: #3A87AD; background-color: #D9EDF7; border: 1px solid #BCE8F1;}
+         
+        /* 必須赤色表示 */
+        .wpcf7 .required { color: #f00;}
+        /* 任意緑色表示 */
+        .wpcf7 .any{ color: #080;}
+      }
     //フッターcss
     #footer {
         position: relative;
