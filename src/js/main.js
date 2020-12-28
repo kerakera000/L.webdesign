@@ -13,6 +13,9 @@ Vue.directive("scroll", {
   // main app
   new Vue({
     el: "#app",
+    data: {
+      navbutton2:false
+    },
     methods: {
       handleScroll: function (evt, el) {
         if (window.scrollY > 800) {

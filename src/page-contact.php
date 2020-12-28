@@ -1,6 +1,13 @@
+<?php
+/*
+Template Name: page-contact
+ */
+?>
+
+
 <?php get_header(); ?>
 
-<div id="mainbody">
+<div id="top" class="mainbody">
         <div id="section9">
         </div>
 
