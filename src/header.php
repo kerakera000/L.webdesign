@@ -15,22 +15,24 @@
 </head>
 
 <body>
+
         <header id="app" class="header" v-scroll="handleScroll" > 
-            <h1 class="header__title"><a href="#">L.WEB DESIGN</a></h1>
+            <h1 class="header__title"><a href="/">L.WEB DESIGN</a></h1>
         
-            <nav class="header__nav">
+            <nav class="header__nav" v-on:click='navbutton2=!navbutton2' 
+            v-bind:class='{navbutton:navbutton2}'>
                 <div class="header__nav-button">
                     <span></span>
                     <span></span>
                     <span></span>
-            </div>
+                </div>
                 <div class="header__list-box"> 
                     <ul class="header__list">
                         <li><a href="#">MENU</a></li>
-                        <li><a href="#">TOP</a></li>
-                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="/">TOP</a></li>
+                        <li><a href="/sample-page/about">ABOUT</a></li>
                         <li><a href="#">SERVICE</a></li>
-                        <li><a class="heade__list--text" href="#"><span class="header__list--icon"></span>CONTACT</a></li>
+                        <li><a class="heade__list--text" href="/sample-page/contact"><span class="header__list--icon"></span>CONTACT</a></li>
                     </ul>
                 </div>
             </nav>
@@ -38,5 +40,4 @@
             <div class="header__jump-button" v-scroll="jumpbutton" v-scroll-to="'#top'">
                 <span></span>
             </div>
-
         </header>
