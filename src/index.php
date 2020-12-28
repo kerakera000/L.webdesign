@@ -100,6 +100,9 @@
         <div class="section5__box"></div>
         <h2 class="section5__title">CONTACT.</h2>
         <h3 class="section5__sub-title">お問い合わせ</h3>
+        <div class="section5__contact-box" >
+            <?php echo do_shortcode( '[contact-form-7 id="27" title="L.WEBDESIGN用コンタクトフォーム"]' ); ?>
+        </div>
     </div>
 
     <div id="section6">

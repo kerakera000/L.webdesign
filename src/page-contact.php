@@ -20,6 +20,10 @@ Template Name: page-contact
                 料金やサービス内容などお気軽にお問い合わせください。ご検討中やお悩み中の段階でもまずはその旨ご連絡ください。
             </p>
         </div>
+
+        <div class="section11">
+            <?php echo do_shortcode( '[contact-form-7 id="27" title="L.WEBDESIGN用コンタクトフォーム"]' ); ?>
+        </div>
 </div>
 
 <?php get_footer(); ?>
