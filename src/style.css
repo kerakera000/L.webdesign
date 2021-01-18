@@ -590,7 +590,7 @@ Version: *** バージョン (今日の日付等: 20200811)***
   #section5 .section5__contact-box div.wpcf7 textarea {
     width: 100%;
     height: 300px;
-    color: white;
+    color: black;
   }
   #section5 .section5__contact-box div.wpcf7 input.wpcf7-submit {
     cursor: pointer;
@@ -934,6 +934,7 @@ Version: *** バージョン (今日の日付等: 20200811)***
   .section11 div.wpcf7 textarea {
     width: 100%;
     height: 300px;
+    color: black;
   }
   .section11 div.wpcf7 input.wpcf7-submit {
     cursor: pointer;

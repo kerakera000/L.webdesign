@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: page-servise
+Template Name: page-service
  */
 ?>
 

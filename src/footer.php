@@ -4,7 +4,7 @@
         <ul class="footer__list">
             <li><a href="/">TOP</a></li>
             <li><a href="/sample-page/about">ABOUT</a></li>
-            <li><a href="/sample-page/servise">SERVICE</a></li>
+            <li><a href="/sample-page/service">SERVICE</a></li>
             <li><a href="/sample-page/contact">CONTACT</a></li>
         </ul>
     </footer>
