@@ -5,9 +5,9 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title><?php wp_title(); ?>L.WEB DESIGN(エルドットウェブデザイン)</title>
-    <meta name="description" content="<?php bloginfo('description'); ?>">
+    <meta name="description" content="<?php bloginfo('description'); ?>Webサイト制作、コーディング代行等を中心にお引き受けしております。">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
-    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
+    <meta name="author" content="LOPEZ JOHNMARK">
     <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/sp.css">
