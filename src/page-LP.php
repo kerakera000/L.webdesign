@@ -98,7 +98,7 @@ Template Name: page-LP
                 </div>
 
                 <div class="section23__link-subbox box2">
-                    <a href="/sample-page/servise">
+                    <a href="/sample-page/service">
                         <div class="section23__link--img"></div>
                         <p class="section23__link-text">
                             HP作成プラン

@@ -70,7 +70,7 @@
 
         <div class="section2__service-link-box">
             <p class="section2__service-link-text">
-                <a href="/sample-page/servise">
+                <a href="/sample-page/service">
                 サービス内容の詳細
                 </a>
             </p>
