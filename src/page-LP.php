@@ -30,7 +30,7 @@ Template Name: page-LP
                 <p class="section20__text">Milk tea is my energy source</p>
                 <div class="section20__link--contact">
                     <div class="section20__img--mail"></div>
-                    <p class="section20__linktext"><a href="#">CONTACT.</a></p>
+                    <p class="section20__linktext"><a href="/sample-page/contact">CONTACT.</a></p>
                 </div>
             </div>
             <div class="section20__mousebox">

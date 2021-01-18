@@ -92,7 +92,7 @@ Template Name: page-about
                     TEL
                 </p>
                 <p class="section8__Business-content-box5--text2">
-                    080-5059-8210
+                    080-5150-8120
                 </p>
                 <p class="section8__Business-content-box5--text3">
                     電話でのお問い合わせはご遠慮ください
