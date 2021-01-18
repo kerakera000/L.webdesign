@@ -34,7 +34,7 @@
                         <li><a href="#">MENU</a></li>
                         <li><a href="/">TOP</a></li>
                         <li><a href="/sample-page/about">ABOUT</a></li>
-                        <li><a href="/sample-page/servise">SERVICE</a></li>
+                        <li><a href="/sample-page/service">SERVICE</a></li>
                         <li><a class="heade__list--text" href="/sample-page/contact"><span class="header__list--icon"></span>CONTACT</a></li>
                     </ul>
                 </div>
