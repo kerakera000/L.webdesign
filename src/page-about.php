@@ -1,6 +1,12 @@
+<?php
+/*
+Template Name: page-about
+ */
+?>
+
 <?php get_header(); ?>
 
-<div id="mainbody"> 
+<div id="top" class="mainbody"> 
     <div id="section7">
     </div>
 

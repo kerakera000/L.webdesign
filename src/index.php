@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
-<div id="section1">
+<div id="top" class="mainbody"> 
+    <div id="section1">
         <div class="section1__titlebox">
             <h2 class="section1__title">L.WEB DESIGN</h2>
             <div class="section1__underline"></div>
@@ -11,7 +12,7 @@
             <div class="section1__mouseicon"></div>
         </div>
     </div>
-<div id="mainbody"> 
+
     <div id="section2">
         <h2 class="section2__title">SERVICE.</h2>
         <h3 class="section2__subtitle">サービス内容</h3>
@@ -29,7 +30,7 @@
 
         <div class="section2__Contact-Us-box">
             <p class="section2__Contact-Us-text">
-                <a href="#">
+                <a href="/sample-page/contact">
                     お問い合わせはコチラ
                 </a>
             </p>
@@ -69,7 +70,7 @@
 
         <div class="section2__service-link-box">
             <p class="section2__service-link-text">
-                <a href="#">
+                <a href="/sample-page/servise">
                 サービス内容の詳細
                 </a>
             </p>
@@ -86,19 +87,36 @@
         <p class="section3__text--3">住所： 埼玉県さいたま市</p>
         <p class="section3__text--4">ITグループ WillMake-inc会員</p>
         <div class="section3__link-box">
-            <p class="section3__link-text"><a href="#">詳細</a></p>
+            <p class="section3__link-text"><a href="/sample-page/about">詳細</a></p>
         </div>
     </div>
 
     <div id="section4">
         <h2 class="section4__title">WORKS.</h2>
         <h3 class="section4__sub-title">実績</h3>
+        <a href="/">
+        <div class="section4__box">
+            <div class="section4__box--title">
+                L.WEB DESIGN
+            </div>
+            <div class="section4__box--underline"></div>
+            <div class="section4__box--subtitle">
+                Milk tea is my energy source
+            </div>
+        </div>
+        </a>
+        <p class="section4__text">
+            L.WEB DESIGN
+        </p>
     </div>
 
     <div id="section5">
         <div class="section5__box"></div>
         <h2 class="section5__title">CONTACT.</h2>
         <h3 class="section5__sub-title">お問い合わせ</h3>
+        <div class="section5__contact-box" >
+            <?php echo do_shortcode( '[contact-form-7 id="27" title="L.WEBDESIGN用コンタクトフォーム"]' ); ?>
+        </div>
     </div>
 
     <div id="section6">

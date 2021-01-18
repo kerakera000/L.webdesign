@@ -1,5 +1,5 @@
 @charset "utf-8";
-@media (max-width: 450px){
+@media (max-width: 999px) {
     body {
         font-family: "fantasy";
         color: #000;
@@ -11,104 +11,166 @@
         word-break: break-all;
         overflow-x: hidden;
     }
-    #mainbody {
+    .mainbody {
         text-align: center;
         line-height: 5.5vw;
         letter-spacing: 0.08vw;
     }
     h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  p,
-  span {
-    margin: 0%;
-    padding: 0%;
-  }
-  h2 {
-    font-size: 5vw;
-  }
-  h3 {
-    font-size: 3vw;
-  }
-  p {
-    font-size: 3vw;
-  }
-  //ヘッダーcss
-  #header{
-      z-index: 900;
-      position: fixed;
-      width: 100%;
-      height: 10vw;
-      margin-top: 2vw;
-      & a{
-          color: white;
-          text-decoration: none;
-      }
-      & .header__title{
-          position: absolute;
-          font-size: 6vw;
-          left: 27%;
-          top: 50%;
-          transform: translateY(-50%) translateX(-50%);
-      }
-      & .header__nav-button{
-          width: 10vw;
-          height: 100%;
-          position: absolute;
-          right: 5%;
-          z-index: 1000;
-      }
+    h2,
+    h3,
+    h4,
+    h5,
+    p,
+    span {
+        margin: 0%;
+        padding: 0%;
+    }
+    h2 {
+        font-size: 5vw;
+    }
+    h3 {
+        font-size: 3vw;
+    }
+    p {
+        font-size: 3vw;
+    }
+    //ヘッダーcss
+    .header{
+    z-index: 900;
+    position: fixed;
+    width: 100%;
+    height: 12vw;
+    transition: 1s all cubic-bezier(0.39, 0.575, 0.565, 1);
+    & a{
+        color: white;
+        text-decoration: none;
+    }
+    & .header__title{
+        position: absolute;
+        font-size: 6vw;
+        left: 27%;
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+    }
+    & .header__nav{
+        height: 0vw;
+    }
+    & .header__nav-button{
+        width: 10vw;
+        height: 10vw;
+        position: absolute;
+        right: 5%;
+        top: 8%;
+        z-index: 1000;
       //3本線
-      & span{
-          height: 1px;
-          background-color: white;
-          width: 100%;
-          display: block;
-          &:nth-child(1){
-              margin-top: 1vw;
-            margin-bottom: 3.5vw ;
-          }
-          &:nth-child(2){
-            margin-bottom: 3.5vw ;
-          }
+    & span{
+      height: 1px;
+      background-color: white;
+      width: 100%;
+      display: block;
+      transition: all 0.3s;
+      &:nth-child(1){
+          margin-top: 1vw;
+        margin-bottom: 3.5vw ;
       }
+      &:nth-child(2){
+        margin-bottom: 3.5vw ;
+      }
+    }
+    }
+    
+//ボタンクリック後にする動き
+    & .navbutton{
+      & .header__nav-button{
+      & span{
+        background-color: #000;
+        margin: 0 !important;
+        &:nth-child(1){
+            transition-delay: 0ms !important;
+            transform: translateY(20px) rotate(135deg) !important;
+        }
+        &:nth-child(2){
+            transition-delay: 0s !important;
+            transform:  translateX(18px) scale(0) !important;
+        }
+        &:nth-child(3){
+            transition-delay: 140ms !important;
+            transform: translateY(18px) rotate(405deg) !important;
+        }
+      }
+    }
 
-      & .header__list-box{
-        display: none;
-        z-index: 998;
+     
+    }
+  
+//ここまで
+    & .header__list-box{
+        display: block;
         width: 100%;
         height: 100vh;
+        background-color: none;
+        transform: translateY(-100%);
+        transition: all 1s;
+    }
+    & .header__listbox_active{
+        z-index: 998;
         background-color: white;
         position: absolute;
-      }
-      & .header__list{
-           width: 50vw;
-           height: 90vw;
-           position: absolute;
-           top: 40%;
-           left: 50%;
-           transform: translateY(-50%) translateX(-50%);
-           list-style: none;
-          & li{
-            text-align: center;
-            margin-top: 10vw;
-            font-size: 5vw;
-            &:nth-child(1){
-                font-size: 9vw;
-            }
+        transform: translateY(0%);
+    }
+    & .header__list{
+         width: 50vw;
+         height: 90vw;
+         position: absolute;
+         top: 40%;
+         left: 50%;
+         transform: translateY(-50%) translateX(-50%);
+         list-style: none;
+        & li{
+          text-align: center;
+          margin-top: 10vw;
+          font-size: 5vw;
+          &:nth-child(1){
+              font-size: 9vw;
           }
-          & a{
-            color: #000;
-          }
+        }
+        & a{
+          color: #000;
+        }
+    }
+    & .header__list--icon{
+        display: none;
+    }
+
+    //トップに戻るボタン。。プラグイン使用。
+  //npm install --save vue-scrolltoコマンドでインストール
+  & .header__jump-button{
+      position: fixed;
+      bottom: 1%;
+      right: 1%;
+      width: 10vw;
+      height: 10vw;
+      background-color: white;
+      border-radius: 50%;
+      transition: all 1s;
+      opacity: 0;
+      & span{
+        display: inline-block;
+        width: 9vw;
+        height: 9vw;
+        background-image: url(./img/img-gotop.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 0.5vw;
+        left: 0.5vw;
+        border-radius: 50%;
+        }
       }
-      & .header__list--icon{
-          display: none;
-      }
-  }
-  //トップ title css
-  #section1{
+    }
+    //トップ title css
+    #section1{
     width: 100%;
     height: 100vh;
     background-image: url(./img/img-top-sp.jpeg);
@@ -124,7 +186,7 @@
     }
     & .section1__title{
         position: absolute;
-        top: 0%;
+        top: 1.5vw;
         font-size: 6vw;
         color: white;
         left: 3%;
@@ -134,14 +196,14 @@
         height: 1px;
         width: 100%;
         background-color: white;
-        top: 61%;
+        top: 7vw;
     }
     & .section1__text {
         position: absolute;
         font-size: 3vw;
         color: white;
-        bottom: 2%;
-        left: 10%;
+        bottom: -1vw;
+        left: 2.5vw;
     }
     //マウススクロールcss
     & .section1__mousebox {
@@ -168,593 +230,1804 @@
         background-repeat: no-repeat;
         background-size: contain;
         background-image: url(./img/img-mouse-icon.png);
-      }
-  }
+    }
+    }
 
-  //サービス内容css
-  #section2 {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    height: 300vw;
-    //最初のタイトルとサービス説明css
-    & .section2__title {
-      padding-top: 10vw;
-      height: 14.5vw;
-    }
-    & .section2__subtitle {
-      height: 4vw;
-    }
-    & .section2__Brief-introduction {
-      padding-top: 7vw;
-      height: 50vw;
-    }
-    //お問い合わせリンク
-    & .section2__Contact-Us-box {
-      width: 100%;
-      height: 10.5vw;
-      text-align: center;
-      margin-top: 6vw;
-      & .section2__Contact-Us-text {
-        width: 34%;
-        height: 100%;
+    //サービス内容css
+    #section2 {
         display: inline-block;
-        background-color: #555;
         position: relative;
-      }
-      & a {
         width: 100%;
-        text-decoration: none;
-        color: white;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateY(-50%) translateX(-50%);
-      }
-    }
+        max-width: 1200px;
+        height: 315vw;
+        //最初のタイトルとサービス説明css
+        & .section2__title {
+            padding-top: 10vw;
+            height: 14.5vw;
+        }
+        & .section2__subtitle {
+            height: 4vw;
+        }
+        & .section2__Brief-introduction {
+            padding-top: 7vw;
+            height: 50vw;
+        }
+        //お問い合わせリンク
+        & .section2__Contact-Us-box {
+            width: 100%;
+            height: 10.5vw;
+            text-align: center;
+            margin-top: 6vw;
+            & .section2__Contact-Us-text {
+                width:40vw; 
+               height:10vw; 
+               border-radius:1px;
+               background:gray; 
+                display: inline-block;
+                position: relative;
+            }
+            & a {
+                width: 100%;
+                text-decoration: none;
+                color: white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%) translateX(-50%);
+            }
+        }
 
-    //サービス内容大箱
-    & .section2__service-Contents {
-        width: 100%;
-        height: 200vw;
-        padding: 15vw 26vw 0%;
-        display: inline-flex;
-        justify-content: center;
-        flex-direction: column;
-      }
-      //サービス内容box3つのcss
-      & .section2__service-Contents--box1 {
-        width: 100%;
-        height: 100%;
-        display: inline-block;
-        & .section2__service-Contents--icon1 {
-          width: 14vw;
-          height: 15vw;
-          background-image: url(./img/img-service1.png);
-          background-repeat: no-repeat;
-          background-size: contain;
-          display: inline-block;
+        //サービス内容大箱
+        & .section2__service-Contents {
+            width: 100%;
+            height: 200vw;
+            padding: 15vw 26vw 0%;
+            display: inline-flex;
+            justify-content: center;
+            flex-direction: column;
+            margin: 0 0 10vw;
         }
-        & .section2__service-Contents--text1 {
-          width: 90%;
-          display: inline-block;
+        //サービス内容box3つのcss
+        & .section2__service-Contents--box1 {
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            & .section2__service-Contents--icon1 {
+                width: 20vw;
+                height: 20vw;
+                background-image: url(./img/img-service1.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                display: inline-block;
+            }
+            & .section2__service-Contents--text1 {
+                width: 90%;
+                display: inline-block;
+            }
         }
-      }
-      & .section2__service-Contents--box2 {
-        width: 100%;
-        height: 100%;
-        display: inline-block;
-        & .section2__service-Contents--icon2 {
-          width: 14vw;
-          height: 15vw;
-          background-image: url(./img/img-service2.png);
-          background-repeat: no-repeat;
-          background-size: contain;
-          display: inline-block;
+        & .section2__service-Contents--box2 {
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            & .section2__service-Contents--icon2 {
+                width: 20vw;
+                height: 20vw;
+                background-image: url(./img/img-service2.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                display: inline-block;
+            }
+            & .section2__service-Contents--text2 {
+                width: 90%;
+                display: inline-block;
+            }
         }
-        & .section2__service-Contents--text2 {
-          width: 90%;
-          display: inline-block;
+        & .section2__service-Contents--box3 {
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            & .section2__service-Contents--icon3 {
+                width: 20vw;
+                height: 20vw;
+                background-image: url(./img/img-service3.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                display: inline-block;
+            }
+            & .section2__service-Contents--text3 {
+                width: 90%;
+                display: inline-block;
+            }
         }
-      }
-      & .section2__service-Contents--box3 {
-        width: 100%;
-        height: 100%;
-        display: inline-block;
-        & .section2__service-Contents--icon3 {
-          width: 14vw;
-          height: 15vw;
-          background-image: url(./img/img-service3.png);
-          background-repeat: no-repeat;
-          background-size: contain;
-          display: inline-block;
-        }
-        & .section2__service-Contents--text3 {
-          width: 90%;
-          display: inline-block;
-        }
-      }
-  
-      //サービス内容詳細のリンク
-      & .section2__service-link-box {
-        width: 100%;
-        height: 11vw;
-        text-align: center;
-        & .section2__service-link-text {
-          width: 34%;
-          height: 100%;
-          display: inline-block;
-          background-color: #555;
-          position: relative;
-        }
-        & a {
-          width: 100%;
-          text-decoration: none;
-          color: white;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translateY(-50%) translateX(-50%);
-        }
+
+        //サービス内容詳細のリンク
+        & .section2__service-link-box {
+            text-align: center;
+            & .section2__service-link-text {
+                width:40vw; 
+               height:10vw; 
+               border-radius:1px;
+               background:gray; 
+                display: inline-block;
+                position: relative;
+            }
+            & a {
+                width: 100%;
+                text-decoration: none;
+                color: white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%) translateX(-50%);
+            }
         }
     }
 
     //事業内容
-  #section3 {
-    width: 100%;
-    height: 85vw;
-    margin: 4.5vw 0;
-    position: relative;
-    & .section3__box {
-      background-color: #2b7270;
+    #section3 {
+        width: 100%;
+        height: 85vw;
+        margin: 4.5vw 0;
+        position: relative;
+        & .section3__box {
+            background-color: #2b7270;
+            width: 100%;
+            height: 100%;
+            transform: skewY(5deg);
+        }
+        & .section3__title {
+            height: 6vw;
+            padding-top: 1vw;
+            position: absolute;
+            top: 21%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            color: white;
+        }
+        & .section3__sub-title {
+            height: 5vw;
+            position: absolute;
+            top: 27%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            color: white;
+        }
+        & .section3__text--1 {
+            height: 5vw;
+            position: absolute;
+            top: 39%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            color: white;
+        }
+        & .section3__text--2 {
+            height: 5vw;
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            color: white;
+        }
+        & .section3__text--3 {
+            height: 5vw;
+            position: absolute;
+            top: 51%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            color: white;
+        }
+        & .section3__text--4 {
+            height: 5vw;
+            position: absolute;
+            top: 57%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            color: white;
+        }
+        & .section3__link-box {
+            position: absolute;
+            height: 11vw;
+            width: 164vw;
+            max-width: 1200px;
+            top: 78%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            text-align: center;
+        }
+        & .section3__link-text {
+            width:40vw; 
+               height:10vw; 
+               border-radius:1px;
+               background:gray; 
+            display: inline-block;
+            position: relative;
+            & a {
+                width: 100%;
+                position: absolute;
+                text-decoration: none;
+                color: white;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%) translateX(-50%);
+            }
+        }
+    }
+
+    //仕事実績
+    #section4 {
       width: 100%;
-      height: 100%;
-      transform: skewY(5deg);
-    }
-    & .section3__title {
-      height: 6vw;
-      padding-top: 1vw;
-      position: absolute;
-      top: 21%;
-      left: 50%;
-      transform: translateY(-50%) translateX(-50%);
-      color: white;
-    }
-    & .section3__sub-title {
-      height: 5vw;
-      position: absolute;
-      top: 27%;
-      left: 50%;
-      transform: translateY(-50%) translateX(-50%);
-      color: white;
-    }
-    & .section3__text--1 {
-      height: 5vw;
-      position: absolute;
-      top: 39%;
-      left: 50%;
-      transform: translateY(-50%) translateX(-50%);
-      color: white;
-    }
-    & .section3__text--2 {
-      height: 5vw;
-      position: absolute;
-      top: 45%;
-      left: 50%;
-      transform: translateY(-50%) translateX(-50%);
-      color: white;
-    }
-    & .section3__text--3 {
-      height: 5vw;
-      position: absolute;
-      top: 51%;
-      left: 50%;
-      transform: translateY(-50%) translateX(-50%);
-      color: white;
-    }
-    & .section3__text--4 {
-      height: 5vw;
-      position: absolute;
-      top: 57%;
-      left: 50%;
-      transform: translateY(-50%) translateX(-50%);
-      color: white;
-    }
-    & .section3__link-box {
-      position: absolute;
-      height: 11vw;
-      width: 164vw;
-      max-width: 1200px;
-      top: 78%;
-      left: 50%;
-      transform: translateY(-50%) translateX(-50%);
-      text-align: center;
-    }
-    & .section3__link-text {
-      width: 20%;
-      height: 100%;
-      background-color: #555;
-      display: inline-block;
+      height: 72vw;
       position: relative;
-      & a {
+      & .section4__title {
+        height: 3vw;
+        padding-top: 1vw;
         position: absolute;
-        text-decoration: none;
+        top: 5vw;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        color: black;
+      }
+      & .section4__sub-title {
+        height: 2vw;
+        position: absolute;
+        top: 10.5vw;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        color: black;
+      }
+      & .section4__box{
+        background-image: url(./img/img-top.jpg);
+        background-repeat: no-repeat;
+        position: relative;
+        background-size: cover;
+        width: 45vw;
+        height: 26vw;
+        position: absolute;
+        top:35vw;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        .section4__box--title{
+          position: absolute;
+          font-size: 1.8vw;
+          top: 4vw;
+          left: 2vw;
+          color: white;
+        }
+        .section4__box--underline{
+          position: absolute;
+          width: 13.6vw;
+          height: 1px;
+          top: 7.2vw;
+          background-color: white;
+          left: 1.8vw;
+        }
+        .section4__box--subtitle{
+          position: absolute;
+          font-size: 0.8vw;
+          top: 5.4vw;
+          left: 2.5vw;
+          color: white;
+        }
+      }
+      .section4__text{
+        position: absolute;
+        top: 60vw;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        font-size: 3.5vw;
+      }
+    }
+  
+
+    //お問い合わせ
+    #section5 {
+        width: 100%;
+        height: 280vw;
+        margin: 4.5vw 0;
+        position: relative;
+        & .section5__box {
+            background-color: #2b7270;
+            width: 100%;
+            height: 95%;
+            transform: skewY(-5deg);
+        }
+        & .section5__title {
+            height: 6vw;
+            padding-top: 1vw;
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            color: white;
+        }
+        & .section5__sub-title {
+            height: 5vw;
+            position: absolute;
+            top: 7%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            color: white;
+        }
+        & .section5__contact-box{
+            display: inline-block;
+            position: absolute;
+            top: 47%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            text-align: left;
+            background-color: white;
+            height: auto;
+            border-radius: 3px;
+            padding: 3vw 0 0;
+            /* デザインカスタマイズ */
+            div.wpcf7 {  
+                padding:0px; 
+                -moz-border-radius:10px; 
+                -khtml-border-radius:10px; 
+                -webkit-border-radius:10px; 
+                border-radius:10px; 
+                margin:0 0 30px 0; 
+            }
+            div.wpcf7 p { 
+                color: black; 
+                margin:0; 
+                font-size:3vw; 
+                padding: 0 2vw 0;
+            }
+            div.wpcf7 input, .wpcf7 textarea { 
+                border:1px solid black; 
+                padding:8px; 
+                font-size:14px; 
+                color: black;
+            }
+            div.wpcf7 textarea { 
+                width:100%; 
+                height:300px;
+                color: white; 
+            }
+            div.wpcf7 input.wpcf7-submit {
+               cursor:pointer; 
+               color:#fff; 
+               font-size:14px; 
+               width:40vw; 
+               height:10vw; 
+               border-radius:1px;
+               background:gray; 
+               margin: 6vw auto 0; 
+               display:block;
+               border:1px solid ;
+               transition: all 0.5s;
+            }
+            .wpcf7 input.wpcf7-submit:active { 
+                box-shadow:none; 
+                bottom:-2px; 
+                position:relative; 
+            }
+            .wpcf7 input:focus, .wpcf7 textarea:focus { 
+                border:1px solid #009de1; }
+            .wpcf7-captchac { 
+                border:1px solid white; 
+            }
+             
+             
+            /* エラー個所をわかりやすく表示 */
+            .wpcf7 .wpcf7-not-valid { 
+                background: #ffb6c1; 
+            }
+            .wpcf7 span.wpcf7-not-valid-tip {
+                font-size: 80%;
+            }
+            .wpcf7 .wpcf7-response-output {
+                text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); 
+                border-color: black;
+                color: red;
+                border-radius: 4px; }
+            .wpcf7 .wpcf7-validation-errors {
+                color: #B94A48; 
+                background-color: #F2DEDE; 
+                border: 1px solid #EED3D7;}
+            .wpcf7 .wpcf7-mail-sent-ok {
+                color: #3A87AD; 
+                background-color: #D9EDF7; 
+                border: 1px solid #BCE8F1;}
+            .div.wpcf7 .ajax-loader{
+                display: none;
+            }
+            /* 必須赤色表示 */
+            .wpcf7 .required { color: #f00;}
+            /* 任意緑色表示 */
+            .wpcf7 .any{ color: #080;}
+          }
+    }
+
+    //お知らせ
+    #section6 {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
+        height: 85vw;
+        & .section6__title {
+            padding-top: 4vw;
+            height: 9vw;
+        }
+        & .section6__subtitle {
+            height: 5vw;
+        }
+        & .section6__notification-box {
+            font-size: 4vw;
+            overflow: auto;
+            width: 90vw;
+            height: 60vw;
+            padding: 1vw;
+            margin-top: 5vw;
+            color: black;
+            background-color: white;
+            line-height: 1.5em;
+            text-align: center;
+            display: inline-block;
+            border-bottom: 1px solid #555;
+            border-top: 1px solid #555;
+        }
+    }
+
+    //事業内容の詳細ページのcss
+    #section7 {
+        width: 100%;
+        height: 160vw;
+        background-image: url(./img/img-about-top.jpg);
+        background-repeat: no-repeat;
+        position: relative;
+        background-size: cover;
+        background-position: center left 40%;
+    }
+    //事業内容の詳細css-2
+    #section8 {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
+        height: 270vw;
+        //最初のタイトルとサービス説明css
+        & .section8__title {
+            padding-top: 4vw;
+            height: 6vw;
+        }
+        //メッセージcss
+        & .section8__message {
+            padding-top: 2vw;
+            height: 6vw;
+        }
+        & .section8__profile-box {
+            width: 100%;
+            height: 120vw;
+            margin-top: 1vw;
+        }
+        & .section8__profile-img--box {
+            width: 1000%;
+            height: 50%;
+            position: relative;
+        }
+        & .section8__profile-img {
+            width: 45vw;
+            height: 45vw;
+            background-image: url(./img/img-profile.JPG);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: center left 75%;
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            border-radius: 50%;
+            transform: translateY(-50%) translateX(-50%) rotate(15deg);
+        }
+        & .section8__profile--text {
+            width: 100%;
+            height: 50%;
+            text-align: center;
+            padding: 0 10vw;
+        }
+        & .section8__Business-content {
+            height: 2vw;
+            margin-top: 3vw;
+        }
+        & .section8__Business-content-box {
+            border-bottom: 1.5px dashed #555;
+            border-top: 1.5px dashed #555;
+            height: 113vw;
+            width: 100%;
+            max-width: 950px;
+            margin-top: 3vw;
+            display: inline-block;
+            position: relative;
+            & .section8__Business-content-box--text1 {
+                position: absolute;
+                bottom: 3%;
+                left: 3%;
+            }
+            & .section8__Business-content-box--text2 {
+                position: absolute;
+                bottom: 3.5%;
+                left: 42%;
+            }
+        }
+
+        & .section8__Business-content-box1 {
+            border-bottom: 1.5px dashed #555;
+            height: 15vw;
+            width: 100%;
+            display: inline-block;
+            position: relative;
+            & .section8__Business-content-box1--text1 {
+                position: absolute;
+                bottom: 27%;
+                left: 3%;
+            }
+            & .section8__Business-content-box1--text2 {
+                position: absolute;
+                bottom: 27%;
+                left: 42%;
+            }
+        }
+        & .section8__Business-content-box2 {
+            border-bottom: 1.5px dashed #555;
+            height: 15vw;
+            width: 100%;
+            display: inline-block;
+            position: relative;
+            & .section8__Business-content-box2--text1 {
+                position: absolute;
+                bottom: 27%;
+                left: 3%;
+            }
+            & .section8__Business-content-box2--text2 {
+                position: absolute;
+                bottom: 27%;
+                left: 42%;
+            }
+        }
+        & .section8__Business-content-box3 {
+            border-bottom: 1.5px dashed #555;
+            height: 15vw;
+            width: 100%;
+            display: inline-block;
+            position: relative;
+            & .section8__Business-content-box3--text1 {
+                position: absolute;
+                bottom: 27%;
+                left: 3%;
+            }
+            & .section8__Business-content-box3--text2 {
+                position: absolute;
+                bottom: 50%;
+                left: 42%;
+            }
+            & .section8__Business-content-box3--text3 {
+                position: absolute;
+                bottom: 10%;
+                left: 42%;
+            }
+        }
+        & .section8__Business-content-box4 {
+            border-bottom: 1.5px dashed #555;
+            height: 15vw;
+            width: 100%;
+            display: inline-block;
+            position: relative;
+            & .section8__Business-content-box4--text1 {
+                position: absolute;
+                bottom: 27%;
+                left: 3%;
+            }
+            & .section8__Business-content-box4--text2 {
+                position: absolute;
+                bottom: 50%;
+                left: 42%;
+            }
+            & .section8__Business-content-box4--text3 {
+                position: absolute;
+                bottom: 10%;
+                left: 42%;
+            }
+        }
+        & .section8__Business-content-box5 {
+            border-bottom: 1.5px dashed #555;
+            height: 15vw;
+            width: 100%;
+            display: inline-block;
+            position: relative;
+            & .section8__Business-content-box5--text1 {
+                position: absolute;
+                bottom: 27%;
+                left: 3%;
+            }
+            & .section8__Business-content-box5--text2 {
+                position: absolute;
+                bottom: 50%;
+                left: 42%;
+            }
+            & .section8__Business-content-box5--text3 {
+                position: absolute;
+                bottom: 10%;
+                left: 42%;
+            }
+        }
+        & .section8__Business-content-box6 {
+            border-bottom: 1.5px dashed #555;
+            height: 15vw;
+            width: 100%;
+            display: inline-block;
+            position: relative;
+            & .section8__Business-content-box6--text1 {
+                position: absolute;
+                bottom: 27%;
+                left: 3%;
+            }
+            & .section8__Business-content-box6--text2 {
+                position: absolute;
+                bottom: 27%;
+                left: 42%;
+            }
+        }
+    }
+
+    //お問い合わせ
+    #section9 {
+        width: 100%;
+        height: 160vw;
+        background-image: url(./img/img-contact.jpg);
+        background-repeat: no-repeat;
+        position: relative;
+        background-size: cover;
+        background-position: center left 40%;
+    }
+
+    //お問い合わせtitleとフォーム
+    #section10 {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
+        height: 50vw;
+        & .section10__title {
+            padding-top: 4vw;
+            height: 9vw;
+        }
+        & .section10__subtitle {
+            height: 2vw;
+        }
+        & .section10__text {
+            padding-top: 10vw;
+            height: 40vw;
+            width: 62vw;
+            display: inline-block;
+        }
+    }
+
+    //contact7お問い合わせフォーム内容
+    .section11 {
+        width: 100%;
+        display: inline-block;
+        /* デザインカスタマイズ */
+        div.wpcf7 {  padding:0px; -moz-border-radius:10px; -khtml-border-radius:10px; -webkit-border-radius:10px; border-radius:10px; margin:0 0 30px 0; }
+        div.wpcf7 p { padding:20px 20px 0; margin:0; font-size:11px; }
+        div.wpcf7 input, .wpcf7 textarea { border:1px solid #ccc; padding:8px; font-size:14px; }
+        div.wpcf7 textarea { width:97.5%; height:300px; }
+        div.wpcf7 input.wpcf7-submit {
+           cursor:pointer; color:#fff; font-weight:bold; font-size:14px; width:200px; height:45px; margin:0 auto; display:block;
+           -moz-border-radius:5px; -khtml-border-radius:5px; -webkit-border-radius:5px; border-radius:5px;
+           background:#333; box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5), inset 0px 32px 0px -12px #808080; border:1px solid #666;
+        }
+        div.wpcf7 input.wpcf7-submit:hover { background:#006080; box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5), inset 0px 32px 0px -12px #007ea8; border:1px solid #006080; }
+        .wpcf7 input.wpcf7-submit:active { box-shadow:none; bottom:-2px; position:relative; }
+        .wpcf7 input:focus, .wpcf7 textarea:focus { border:1px solid #009de1; }
+        .wpcf7-captchac { border:1px solid #ccc; }
+         
+         
+        /* エラー個所をわかりやすく表示 */
+        .wpcf7 .wpcf7-not-valid { background: #ffb6c1; }
+        .wpcf7 span.wpcf7-not-valid-tip {font-size: 80%;}
+        .wpcf7 .wpcf7-response-output {margin: 10px 0 0; padding: 8px 35px 8px 14px; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+            -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
+        .wpcf7 .wpcf7-validation-errors {color: #B94A48; background-color: #F2DEDE; border: 1px solid #EED3D7;}
+        .wpcf7 .wpcf7-mail-sent-ok {color: #3A87AD; background-color: #D9EDF7; border: 1px solid #BCE8F1;}
+         
+        /* 必須赤色表示 */
+        .wpcf7 .required { color: #f00;}
+        /* 任意緑色表示 */
+        .wpcf7 .any{ color: #080;}
+    }
+
+
+  //サービス内容
+  #section12{
+    width: 100%;
+    height: 160vw;
+    background-image: url(./img/img-servise.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+  }
+
+  //タイトル
+  #section13{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 13vw;
+    //最初のタイトルとサービス説明css
+    & .section13__title {
+      padding-top: 4vw;
+      height: 9vw;
+      font-size: 5vw;
+    }
+    //メッセージcss
+    & .section13__message{
+      height: 6vw;
+      font-size: 3vw;
+    }
+  }
+
+
+  //サービス内容css
+  #section14 {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 220vw;
+    & .section14__service-Contents {
+      width: 100%;
+      padding: 3vw 5vw 0%;
+      display: inline-flex;
+      align-items: center;
+      flex-direction:column;
+    }
+   //サービス内容box3つのcss
+   & .section14__service-Contents--box1 {
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    margin: 1vw 0 10vw;
+    & .section14__service-Contents--subtitle1{
+      font-size: 4vw;
+    }
+    & .section14__service-Contents--icon1 {
+      width: 25vw;
+      height: 25vw;
+      background-image: url(./img/img-service1.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: inline-block;
+    }
+    & .section14__service-Contents--text1 {
+      width: 100%;
+      font-size: 3vw;
+      display: inline-block;
+    }
+  }
+
+
+  & .section14__service-Contents--box2 {
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    margin: 1vw 0 10vw;
+    & .section14__service-Contents--subtitle2{
+      font-size: 4vw;
+    }
+    & .section14__service-Contents--icon2 {
+      width: 25vw;
+      height: 25vw;
+      background-image: url(./img/img-service2.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: inline-block;
+    }
+    & .section14__service-Contents--text2 {
+      width: 100%;
+      font-size: 3vw;
+      display: inline-block;
+    }
+  }
+
+
+  & .section14__service-Contents--box3 {
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    margin: 1vw 0 10vw;
+    & .section14__service-Contents--subtitle3{
+      font-size: 4vw;
+    }
+    & .section14__service-Contents--icon3 {
+      width: 25vw;
+      height: 25vw;
+      background-image: url(./img/img-service3.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: inline-block;
+    }
+    & .section14__service-Contents--text3 {
+      width: 100%;
+      font-size: 3vw;
+      display: inline-block;
+    }
+  }
+  }
+
+  //コーティングサービス詳細
+  #section15{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: 2vw 0;
+    //タイトル
+    & .section15__message{
+      margin: 1vw;
+      font-size: 5vw;
+    }
+    //サービス1の内容大箱タイトル
+    & .section15__service1-box{
+      width: 95%;
+      display: inline-block;
+      height: auto;
+      background-color: #F5F4F4;
+      border:solid 1px #2b7270;
+      text-align: center;
+      & p{
         color: white;
+      }
+    }
+    //サービス内容タイトル
+    & .section15__service1-titleBox{
+      width: 100%;
+      height: 10vw;
+      background-color: #2b7270;
+      position: relative;
+    }
+    & .section15__service1-title{
+      position: absolute;
+      color: white;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      width: 100%;
+      transform: translateY(-50%) translateX(-50%);
+    }
+    
+    & .section15__service1-mainbox{
+      display: inline-flex;
+      background-color: #F5F4F4;
+      width: 90%;
+      height: auto;
+      flex-direction: column;
+      align-items: center;
+      margin: 5vw 0 2vw;
+    }
+    //サービス1
+    & .section15__service1-box1{
+      background-color: #F5F4F4;
+      height: auto;
+      width: 100%;
+      position: relative;
+    }
+    //サービス2
+    & .section15__service1-box2{
+      background-color: #F5F4F4;
+      height: auto;
+      width: 100%;
+      position: relative;
+      margin: 10vw 0 0;
+    }
+    //サービス1の中の箱はcss統一でやります。
+    //サービス１内容の簡単な説明
+    & .section15__service1-subbox1{
+      width: 100%;
+      background-color: #2b7270;
+      height: 75vw;
+      z-index: 50;
+    }
+    //サービス２内容の詳細な説明
+    & .section15__service1-subbox2--1{
+      width: 100%;
+      background-color: #2A5C5A;
+      height: auto;
+      z-index: 25;
+    }
+    & .section15__service1-subbox2--2{
+      width: 100%;
+      background-color: #2A5C5A;
+      height: auto;
+      z-index: 25;
+    }
+    //サービス１内容の簡単な説明のテキスト
+    & .section15__service1--text-1{
+      font-size: 4.5vw;
+      padding: 3vw 0 0;
+    }
+    & .section15__service1--text-2{
+      font-size: 4vw;
+      padding: 0;
+    }
+    & .section15__service1--text-3{
+      font-size: 4.8vw;
+      padding: 0vw 0;
+      margin: 4vw 0 6vw;
+    }
+
+    & .section15__service1--text-4-box{
+      width: 85%;
+      height: 42vw;
+      padding: 1vw 0;
+      border:1px solid white;
+      text-align: center;
+      display: inline-block;
+    }
+    & .section15__service1--text-4{
+      font-size: 4.1vw;
+    }
+    & .section15__service1--text-5{
+      display: inline-block;
+      font-size: 3.2vw;
+      margin: 3vw 0 0;
+      width: 90%;
+    }
+    //サービス２内容の詳細な説明のテキスト
+    .section15__service1--list-box{
+      width: 100%;
+      height: auto;
+      background-color: #2A5C5A;
+      overflow: hidden;
+      text-align: center;
+      padding: 1.7vw 0 1.7vw;
+      transition: all 0.5s;
+      position: relative;
+      & .service15__service1--list-title{
+        color: white;
+        font-size: 4vw;
+      }
+      & .section15__service1--list-icon{
+        width: 7vw;
+        height: 7vw;
+        background-image: url(./img/img-service-icon.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        transition: all 0.2s;
+        transform: rotate(0deg);
+        position: absolute;
+        right: 3vw;
+        top: 1.5vw;
+      }
+      & .section15__section1--list{
+        width: 85%;
+        height: 0vw;
+        background-color: white;
+        list-style: none;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-40vw);
+        transition: margin 0.31s, height 0.3s, translate 0.3s, opacity 0.7s;
+        & li{
+          color: black;
+          margin: 1vw 0;
+        }
+      }
+    }
+    //サービス２内容の詳細な説明のテキストの動きcss
+    .active{
+      width: 100%;
+      height: auto;
+      background-color: #2A5C5A;
+      text-align: center;
+      padding: 1.7vw 0 1.7vw;
+      & .section15__service1--list-icon{
+        width: 7vw;
+        height: 6vw;
+        background-image: url(./img/img-service-icon.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        transform:rotate(180deg);
+      }
+      & .section15__section1--list{
+        margin: 2.3vw 0 2vw;
+        width: 85%;
+        display: inline-block;
+        height: 79vw;
+        background-color: white;
+        list-style: none;
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+        & li{
+          color: black;
+          margin: 5vw 0;
+        }
+      }
+    }
+
+    .active1{
+      width: 100%;
+      height: auto;
+      background-color: #2A5C5A;
+      text-align: center;
+      padding: 1.7vw 0 1.7vw;
+      & .section15__service1--list-icon{
+        width: 7vw;
+        height: 6vw;
+        background-image: url(./img/img-service-icon.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        transform:rotate(180deg);
+      }
+      & .section15__section1--list{
+        margin: 2.3vw 0 2vw;
+        width: 85%;
+        display: inline-block;
+        height: 79vw;
+        background-color: white;
+        list-style: none;
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+        & li{
+          color: black;
+          margin: 5vw 0;
+        }
+      }
+    }
+    .section15__contact_link{
+        width:40vw; 
+        height:10vw; 
+        border-radius:1px;
+        background:gray; 
+      display: inline-block;
+      font-size: 3.1vw;
+      padding: 2.5vw 0 0;
+      margin: 13vw 0vw 6vw;
+      & a{
+        color: white;
+        text-decoration: none;
+      }
+    }
+
+
+  
+  
+  
+  
+  
+  
+  }
+
+  //サービス詳細
+  #section16{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: 2vw 0;
+    //サービス1の内容大箱タイトル
+    & .section16__service1-box{
+      width: 95%;
+      height: auto;
+      background-color: #F5F4F4;
+      border:solid 1px #577AB7;
+      text-align: center;
+      display: inline-block;
+      margin: 10vw 0 0;
+      & p{
+        color: white;
+      }
+    }
+    //サービス内容タイトル
+    & .section16__service1-titleBox{
+      width: 100%;
+      height: 10vw;
+      background-color: #577AB7;
+      position: relative;
+    }
+    & .section16__service1-title{
+      position: absolute;
+      color: white;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      transform: translateY(-50%) translateX(-50%);
+    }
+    
+    & .section16__service1-mainbox{
+      display: inline-flex;
+      background-color: #F5F4F4;
+      width: 90%;
+      height: auto;
+      flex-direction: column;
+      align-items: center;
+      margin: 5vw 0 2vw;
+    }
+    //サービス1
+    & .section16__service1-box1{
+      background-color: #F5F4F4;
+      height: auto;
+      width: 100%;
+      position: relative;
+    }
+    //サービス2
+    & .section16__service1-box2{
+      background-color: #F5F4F4;
+      height: auto;
+      width: 100%;
+      position: relative;
+      margin: 10vw 0 0;
+    }
+    //サービス1の中の箱はcss統一でやります。
+    //サービス１内容の簡単な説明
+    & .section16__service1-subbox1{
+      width: 100%;
+      background-color: #577AB7;
+      height: 75vw;
+      z-index: 50;
+    }
+    //サービス２内容の詳細な説明
+    & .section16__service1-subbox2--1{
+      width: 100%;
+      background-color: #577AB7;
+      height: auto;
+      z-index: 25;
+    }
+    & .section16__service1-subbox2--2{
+      width: 100%;
+      background-color: #577AB7;
+      height: auto;
+      z-index: 25;
+    }
+    //サービス１内容の簡単な説明のテキスト
+    & .section16__service1--text-1{
+      font-size: 4.5vw;
+      padding: 3vw 0 0;
+    }
+    & .section16__service1--text-2{
+      font-size: 1vw;
+      padding: 0;
+    }
+    & .section16__service1--text-3{
+      font-size: 4.8vw;
+      padding: 0;
+      margin: 4vw 0 6vw;
+    }
+
+    & .section16__service1--text-4-box{
+      width: 85%;
+      height: 42vw;
+      padding: 1vw 0;
+      border:1px solid white;
+      text-align: center;
+      display: inline-block;
+    }
+    & .section16__service1--text-4{
+      font-size: 4.1vw;
+    }
+    & .section16__service1--text-5{
+      display: inline-block;
+      font-size: 3.2vw;
+      margin: 3vw 0 0;
+      width: 90%;
+    }
+    //サービス２内容の詳細な説明のテキスト
+    .section16__service1--list-box{
+      width: 100%;
+      height: auto;
+      background-color: #3860A7;
+      overflow: hidden;
+      text-align: center;
+      padding: 1.7vw 0 1.7vw;
+      transition: all 0.5s;
+      position: relative;
+      & .service16__service1--list-title{
+        color: white;
+        font-size: 4vw;
+      }
+      & .section16__service1--list-icon{
+        width: 7vw;
+        height: 7vw;
+        background-image: url(./img/img-service-icon.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        transition: all 0.2s;
+        transform: rotate(0deg);
+        position: absolute;
+        right: 3vw;
+        top: 1.5vw;
+      }
+      & .section16__section1--list1{
+        width: 85%;
+        height: 0vw;
+        background-color: white;
+        list-style: none;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-40vw);
+        transition: margin 0.31s, height 0.3s, translate 0.3s, opacity 0.7s;
+        & li{
+          color: black;
+          margin: 1vw 0;
+        }
+      }
+      & .section16__section1--list2{
+        width: 85%;
+        height: 0vw;
+        background-color: white;
+        list-style: none;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-40vw);
+        transition: margin 0.31s, height 0.3s, translate 0.3s, opacity 0.7s;
+        & li{
+          color: black;
+          margin: 1vw 0;
+        }
+      }
+    }
+    //サービス２内容の詳細な説明のテキストの動きcss
+    .active{
+      width: 100%;
+      height: auto;
+      background-color: #3860A7;
+      text-align: center;
+      padding: 1.7vw 0 1.7vw;
+      & .section16__service1--list-icon{
+        width: 7vw;
+        height: 6vw;
+        background-image: url(./img/img-service-icon.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        transform:rotate(180deg);
+      }
+      & .section16__section1--list1{
+        margin: 2.3vw 0 1vw;
+        width: 85%;
+        display: inline-block;
+        height: 79vw;
+        background-color: white;
+        list-style: none;
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+        & li{
+          color: black;
+          margin: 5vw 0;
+        }
+      }
+    }
+
+    .active1{
+      width: 100%;
+      height: auto;
+      background-color: #3860A7;
+      text-align: center;
+      padding: 1.7vw 0 1.7vw;
+      & .section16__service1--list-icon{
+        width: 7vw;
+        height: 6vw;
+        background-image: url(./img/img-service-icon.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        transform:rotate(180deg);
+      }
+      & .section16__section1--list2{
+        margin: 2.3vw 0 2vw;
+        width: 85%;
+        display: inline-block;
+        height: 129vw;
+        background-color: white;
+        list-style: none;
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+        & li{
+          color: black;
+          margin: 5vw 0;
+        }
+      }
+    }
+
+    .section16__contact_link{
+        width:40vw; 
+        height:10vw; 
+        border-radius:1px;
+        background:gray; 
+      display: inline-block;
+      font-size: 3.1vw;
+      padding: 2.5vw 0 0;
+      margin: 13vw 0vw 6vw;
+      & a{
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  //サーバードメインについて
+  #section17{
+    width: 100%;
+    max-width: 1200px;
+    display: inline-block;
+    height: 48vw;
+    margin-top: 8vw;
+    & .section17__text{
+      margin-top: 7vw;
+      width: 84vw;
+      display: inline-block;
+    }
+    & .section17__server-title{
+      margin-top: 10vw;
+    }
+    & .section17__table {
+    border-collapse:  collapse;     /* セルの線を重ねる */
+    display: inline-block;
+    }
+    & .section17__table--td{
+      border: 1px solid #333;
+      width: 45vw;
+      height: 17vw;
+      font-size: 3.3vw;
+      text-align: center;
+      }
+
+      & .section17__domain-title{
+        margin: 3vw 0;
+      }
+  }
+
+  //ご利用の流れ
+  #section18{
+    width: 100%;
+    max-width: 1200px;
+    display: inline-block;
+    height: 113vw;
+    & .section18__title{
+      margin: 16vw 0 0;
+    }
+    & .section18__Confirmation-list{
+      display: inline-block;
+      width: 80%;
+      max-width: 500px;
+      text-align: left;
+      border: 1px solid black;
+      margin: 7vw 0;
+      padding: 1vw;
+      & li{
+        list-style: none;
+        margin: 6vw 0;
+      }
+    }
+  }
+
+  #section19{
+    width: 100%;
+    max-width: 1200px;
+    display: inline-block;
+    height: 155vw;
+    & .section19__title{
+      margin: 7vw 0;
+    }
+    & .section19__next-img{
+      width: 5vw;
+      height: 5vw;
+      background-image: url(./img/img-section19-next.png);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      display: inline-block;
+      margin: 3vw 0 2.5vw;
+    }
+    & .section19__main-text{
+      font-size: 4.3vw;
+    }
+    & .section19__contact-jump--box{
+      display: inline-block;
+      width:40vw; 
+      height:10vw; 
+      border-radius:1px;
+      background:gray; 
+      position: relative;
+      margin: 6vw 0;
+      & .section19__contact-jump--link{
+        color: white;
+        text-decoration: none;
+        position: absolute;
+        width: 100%;
         top: 50%;
         left: 50%;
+        font-size: 3.5vw;
         transform: translateY(-50%) translateX(-50%);
       }
     }
   }
-    
-  //仕事実績
-  #section4 {
-    width: 100%;
-    height: 100vw;
-    position: relative;
-    & .section4__title {
-      height: 6vw;
-      padding-top: 1vw;
-      position: absolute;
-      top: 20%;
-      left: 50%;
-      transform: translateY(-50%) translateX(-50%);
-      color: black;
-    }
-    & .section4__sub-title {
-      height: 4vw;
-      position: absolute;
-      top: 25%;
-      left: 50%;
-      transform: translateY(-50%) translateX(-50%);
-      color: black;
-    }
-  }
 
-  //お問い合わせ
-  #section5 {
+  #section20{
     width: 100%;
-    height: 135vw;
-    margin: 4.5vw 0;
-    position: relative;
-    & .section5__box {
-      background-color: #2b7270;
-      width: 100%;
-      height: 100%;
-      transform: skewY(-5deg);
-    }
-    & .section5__title {
-      height: 6vw;
-      padding-top: 1vw;
-      position: absolute;
-      top: 20%;
-      left: 50%;
-      transform: translateY(-50%) translateX(-50%);
-      color: white;
-    }
-    & .section5__sub-title {
-      height: 5vw;
-      position: absolute;
-      top: 24%;
-      left: 50%;
-      transform: translateY(-50%) translateX(-50%);
-      color: white;
-    }
-  }
-
-  //お知らせ
-  #section6 {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    height: 85vw;
-    & .section6__title {
-      padding-top: 4vw;
-      height: 9vw;
-    }
-    & .section6__subtitle {
-      height: 5vw;
-    }
-    & .section6__notification-box {
-      font-size: 4vw;
-      overflow: auto;
-      width: 90vw;
-      height: 60vw;
-      padding: 1vw;
-      margin-top: 5vw;
-      color: black;
-      background-color: white;
-      line-height: 1.5em;
-      text-align: center;
-      display: inline-block;
-      border-bottom: 1px solid #555;
-      border-top: 1px solid #555;
-    }
-  }
-
-  //事業内容の詳細ページのcss
-  #section7{
-    width: 100%;
-    height: 160vw;
-    background-image: url(./img/img-about-top.jpg);
+    height: 100vh;
+    background-image: url(./img/img-top-sp.jpeg);
     background-repeat: no-repeat;
     position: relative;
     background-size: cover;
-    background-position: center left 40%;
-  }
-  //事業内容の詳細css-2
-  #section8{
-      display: inline-block;
-      position: relative;
-      width: 100%;
-      max-width: 1200px;
-      height: 270vw;
-      //最初のタイトルとサービス説明css
-      & .section8__title {
-        padding-top: 4vw;
-        height: 6vw;
-      }
-      //メッセージcss
-      & .section8__message{
-        padding-top: 2vw;
-        height: 6vw;
-      }
-      & .section8__profile-box{
-        width: 100%;
-        height: 120vw;
-        margin-top: 1vw;
-      }
-      & .section8__profile-img--box{
-        width: 1000%;
-        height: 50%;
-        position: relative;
-      }
-      & .section8__profile-img{
-        width: 45vw;
-        height: 45vw;
-        background-image: url(./img/img-profile.JPG);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        background-position: center left 75%;
+    & .section20__titlebox{
+        width: 50vw;
+        height: 11vw;
         position: absolute;
-        top: 50%;
-        left: 5%;
-        border-radius: 50%;
-        transform: translateY(-50%) translateX(-50%) rotate(15deg);
-      }
-      & .section8__profile--text{
+        top: 27vw;
+        left: 7vw;
+    }
+    & .section20__title{
+        position: absolute;
+        top: -16vw;
+        font-size: 6vw;
+        color: white;
+        left: 2vw;
+    }
+    & .section20__underline {
+        position: absolute;
+        height: 1px;
         width: 100%;
-        height: 50%;
-        text-align: center;
-        padding: 0 10vw;
+        background-color: white;
+        top: -10vw;
+    }
+    & .section20__text {
+        position: absolute;
+        font-size: 3vw;
+        color: white;
+        bottom: 16vw;
+        left: 4.5vw;
+    }
+    & .section20__link--contact{
+      width: 28vw;
+      height: 7vw;
+      background-color: #2b7270;
+      position: absolute;
+      top: 1vw;
+      left: 1vw;
+    }
+    & .section20__img--mail{
+      position: absolute;
+      top: 0.5vw;
+      left: 1vw;
+      width: 6vw;
+      height: 5vw;
+      background-image: url(./img/img-contact-icon.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    & .section20__linktext{
+      position: absolute;
+      top: 1vw;
+      right: 1.5vw;
+      font-size: 3.2vw;
+      & a{
+        color: white;
+        text-decoration: none;
       }
-      & .section8__Business-content{
-        height: 2vw;
-        margin-top: 3vw;
+    }
+    //マウススクロールcss
+    & .section20__mousebox {
+        position: absolute;
+        width: 8%;
+        height: 30vw;
+        top: 11vw;
+        left: 63%;
+    }
+    & .section20__line {
+        position: absolute;
+        width: 1px;
+        height: 21vw;
+        left: 49%;
+        background-color: white;
+        top: 0vw;
       }
-      & .section8__Business-content-box{
-        border-bottom: 1.5px dashed #555;
-        border-top: 1.5px dashed #555;
-        height: 113vw;
-        width: 100%;
-        max-width: 950px;
-        margin-top: 3vw;
-        display: inline-block;
-        position: relative;
-        & .section8__Business-content-box--text1{
-          position: absolute;
-          bottom: 3%;
-          left: 3%;
-        }
-        & .section8__Business-content-box--text2{
-          position: absolute;
-          bottom: 3.5%;
-          left:42%;
-        }
-      }
-
-      & .section8__Business-content-box1{
-        border-bottom: 1.5px dashed #555;
-        height: 15vw;
-        width: 100%;
-        display: inline-block;
-        position: relative;
-        & .section8__Business-content-box1--text1{
-          position: absolute;
-          bottom: 27%;
-          left: 3%;
-        }
-        & .section8__Business-content-box1--text2{
-          position: absolute;
-          bottom: 27%;
-          left: 42%;
-        }
-      }
-      & .section8__Business-content-box2{
-        border-bottom: 1.5px dashed #555;
-        height: 15vw;
-        width: 100%;
-        display: inline-block;
-        position: relative;
-        & .section8__Business-content-box2--text1{
-          position: absolute;
-          bottom: 27%;
-          left: 3%;
-        }
-        & .section8__Business-content-box2--text2{
-          position: absolute;
-          bottom: 27%;
-          left: 42%;
-        }
-      }
-      & .section8__Business-content-box3{
-        border-bottom: 1.5px dashed #555;
-        height: 15vw;
-        width: 100%;
-        display: inline-block;
-        position: relative;
-        & .section8__Business-content-box3--text1{
-          position: absolute;
-          bottom: 27%;
-          left: 3%;
-        }
-        & .section8__Business-content-box3--text2{
-          position: absolute;
-          bottom: 50%;
-          left: 42%;
-        }
-        & .section8__Business-content-box3--text3{
-          position: absolute;
-          bottom: 10%;
-          left: 42%;
-        }
-      }
-      & .section8__Business-content-box4{
-        border-bottom: 1.5px dashed #555;
-        height: 15vw;
-        width: 100%;
-        display: inline-block;
-        position: relative;
-        & .section8__Business-content-box4--text1{
-          position: absolute;
-          bottom: 27%;
-          left: 3%;
-        }
-        & .section8__Business-content-box4--text2{
-          position: absolute;
-          bottom: 50%;
-          left: 42%;
-        }
-        & .section8__Business-content-box4--text3{
-          position: absolute;
-          bottom: 10%;
-          left: 42%;
-        }
-      }
-      & .section8__Business-content-box5{
-        border-bottom: 1.5px dashed #555;
-        height: 15vw;
-        width: 100%;
-        display: inline-block;
-        position: relative;
-        & .section8__Business-content-box5--text1{
-          position: absolute;
-          bottom: 27%;
-          left: 3%;
-        }
-        & .section8__Business-content-box5--text2{
-          position: absolute;
-          bottom: 50%;
-          left: 42%;
-        }
-        & .section8__Business-content-box5--text3{
-          position: absolute;
-          bottom: 10%;
-          left: 42%;
-        }
-      }
-      & .section8__Business-content-box6{
-        border-bottom: 1.5px dashed #555;
-        height: 15vw;
-        width: 100%;
-        display: inline-block;
-        position: relative;
-        & .section8__Business-content-box6--text1{
-          position: absolute;
-          bottom: 27%;
-          left: 3%;
-        }
-        & .section8__Business-content-box6--text2{
-          position: absolute;
-          bottom: 27%;
-          left: 42%;
-        }
-      }
+      & .section20__mouseicon {
+        position: absolute;
+        width: 155%;
+        height: 30%;
+        bottom: 0%;
+        left: -6%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url(./img/img-mouse-icon.png);
+    }
   }
-
-  //お問い合わせ
-  #section9{
-    width: 100%;
-    height: 160vw;
-    background-image: url(images/img-contact.jpg);
-    background-repeat: no-repeat;
-    position: relative;
-    background-size: cover;
-    background-position: center left 40%;
-  }
-
-  //お問い合わせtitleとフォーム
-  #section10{
+  #section21{
+    margin: 9vw 0 ;
     display: inline-block;
-    position: relative;
     width: 100%;
     max-width: 1200px;
-    height: 140vw;
-    & .section10__title {
-      padding-top: 4vw;
-      height: 9vw;
-    }
-    & .section10__subtitle {
-      height: 2vw;
-    }
-    & .section10__text{
-      padding-top: 10vw;
-      height: 35vw;
-      width: 60vw;
-      display: inline-block;
-    }
-  }
-
-
-
-//フッターcss
-#footer {
+    height: 114vw;
+    text-align: center;
     position: relative;
-    width: 100%;
-    height: 11vh;
-    background-color: #2b7270;
-    & .footer__box {
+    & .section21__title{
+      display: inline-block;
       position: absolute;
-      width: 100%;
-      height: 40%;
-      top: 30%;
+      top: 7vw;
       left: 50%;
       transform: translateY(-50%) translateX(-50%);
     }
-    & .footer__list {
+    & .section21__title--under-line{
+      height: 0.7vw;
+      background-color: #2b7270;
+      width: 21vw;
+      top: 9.5vw;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      position: absolute;
+    }
+    & .section21__about--box{
+      display: inline-flex;
+      align-items: center;
+      flex-direction:column;
       width: 100%;
-      height: 100%;
+      height: 76%;
+      margin: 30vw 0 0;
+      & li{
+        margin: 2vw 0;
+        list-style: none;
+      }
+    }
+    & .section21__img--me{
+      background-image: url(./img/img-profile.JPG);
+      background-repeat: no-repeat;
+      position: relative;
+      background-size: 100%;
+      background-position: center left 75%;
+      width: 29vw;
+      height: 30vw;
+      border-radius: 15vw;
+      margin: 0 5vw;
+    }
+    & .section21__profile--box{
       display: flex;
       justify-content: center;
-      align-items: center;
-    }
-    & li {
-      font-size: 3.2vw;
-      list-style: none;
-      &:nth-child(1) {
-        margin-right: 15%;
+      text-align: left;
+      width: 100vw;
+      margin: 5vw 0 0 10vw;
+      & .section21__list1{
+        width: 31vw;
       }
-      &:nth-child(3) {
-        margin-left: 15%;
-      }
-      &:nth-child(4) {
-        margin-left: 15%;
+      & .section21__list2{
+        width: 31vw;
       }
     }
-    & a {
-      text-decoration: none;
-      color: white;
-    }
-    & .footer__copyright {
+  }
+  #section22{
+    background-color: #000;
+    width: 100%;
+    height: 230vw;
+    text-align: center;
+    position: relative;
+    text-align: center;
+    & .section22__title{
       color: white;
       position: absolute;
-      top: 80%;
-      width: 50%;
-      font-size: 3vw;
+      top: 13vw;
       left: 50%;
       transform: translateY(-50%) translateX(-50%);
     }
+    & .section22__title--under-line{
+      height: 0.3vw;
+      background-color: #2b7270;
+      width: 26.5vw;
+      position: absolute;
+      top: 15.3vw;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+    }
+    & .section22__img-flexbox{
+      width: 71vw;
+      max-width: 1100px;
+      display: inline-flex;
+      align-items: center;
+      flex-direction:column;
+      height: 180vw;
+      position: absolute;
+      top: 115vw;
+      left: 50%;
+      justify-content: space-around;
+      transform: translateY(-50%) translateX(-50%);
+      & .section22__img{
+        width: 30vw;
+        height: 100%;
+        border-radius: 10vw;
+        &:nth-child(1){
+          background-image: url(./img/img-LP-img1.png);
+          background-repeat: no-repeat;
+          background-size: 100%;
+        }
+        &:nth-child(2){
+          background-image: url(./img/img-LP-img2.png);
+          background-repeat: no-repeat;
+          background-size: 100%;
+        }
+        &:nth-child(3){
+          background-image: url(./img/img-LP-img3.png);
+          background-repeat: no-repeat;
+          background-size: 100%;
+        }
+      }
+    }
+     & .section22__title-text--flexbox{
+       width: 71vw;
+       max-width: 1100px;
+      height: auto;
+      position: absolute;
+      top: 31vw;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      & .section22__title{
+        position: absolute;
+        width: 55vw;
+        height: auto;
+        color: white;
+        font-size: 4vw;
+        &:nth-child(1){
+          left: 35.5vw;
+          top: 35vw;
+        }
+        &:nth-child(2){
+          left: 35.5vw;
+          top: 95vw;
+        }
+        &:nth-child(3){
+          left: 35.5vw;
+          top: 163vw;
+        }
+        & p{
+          margin: 1vw 0;
+        }
+      }
+     }
   }
+  #section23{
+    display: inline-block;
+    width: 84vw;
+    max-width: 1200px;
+    height: 85vw;
+    text-align: center;
+    position: relative;
+    & .section23__title{
+      width: 100%;
+      position: absolute;
+      top: 13vw;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+   }
+    & .section23__under-line{
+      height: 0.3vw;
+      background-color: #2b7270;
+      width: 57vw;
+      position: absolute;
+      top: 15.5vw;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+    }
+    & .secvice23__link-main-box{
+      width: 50vw;
+      height: 52vw;
+      position: absolute;
+      top: 52vw;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+    }
+    & .section23__link-subbox{
+      width: 17vw;
+      height: 24vw;
+      position: absolute;
+      & a{
+        text-decoration: none;
+        color: black;
+      }
+    }
+    & .section23__link--img{
+      width: 17vw;
+      height: 17vw;
+      border-radius: 10vw;
+      margin: 0 auto;
+      filter: drop-shadow(4px 4px 5px rgba(0,0,0,0.6));
+    }
+    & .section23__link-text{
+      margin: 2.5vw 0 0;
+      font-size: 2.2vw;
+      line-height: 1;
+    }
+    & .box1{
+      top: 0vw;
+      left: 1vw;
+      margin: 1vw 0 0;
+      & .section23__link--img{
+        background-image: url(./img/img-link1-LP.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+    & .box2{
+      top: 0vw;
+      right:1vw ;
+      margin: 1vw 0 0;
+      & .section23__link--img{
+        background-image: url(./img/img-link2-LP.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+    & .box4{
+      bottom: 0vw;
+      left: 1vw;
+      margin: 1vw 0 0;
+      & .section23__link--img{
+        background-image: url(./img/img-link4-LP.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+    & .box5{
+      bottom: 0vw;
+      right:1vw ;
+      margin: 1vw 0 0;
+      & .section23__link--img{
+        background-image: url(./img/img-link5-LP.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+  }
+
+    //フッターcss
+    #footer {
+        position: relative;
+        width: 100%;
+        height: 11vh;
+        background-color: #2b7270;
+        & .footer__box {
+            position: absolute;
+            width: 100%;
+            height: 40%;
+            top: 30%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+        }
+        & .footer__list {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        & li {
+            font-size: 3.2vw;
+            list-style: none;
+            &:nth-child(1) {
+                margin-right: 15%;
+            }
+            &:nth-child(3) {
+                margin-left: 15%;
+            }
+            &:nth-child(4) {
+                margin-left: 15%;
+            }
+        }
+        & a {
+            text-decoration: none;
+            color: white;
+        }
+        & .footer__copyright {
+            color: white;
+            position: absolute;
+            top: 80%;
+            width: 50%;
+            font-size: 3vw;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+        }
+    }
 }
