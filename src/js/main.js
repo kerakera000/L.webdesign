@@ -31,3 +31,21 @@ Vue.directive("scroll", {
         },
     },
   });
+
+
+  var app1 = new Vue({
+    el: "#app-1",
+    data: {
+      isActive1:false,
+      isActive01:false,
+       
+    }
+  });
+  
+  var app2 = new Vue({
+    el: "#app-2",
+    data: {
+      Active1:false,
+      Active01:false, 
+    }
+  });
