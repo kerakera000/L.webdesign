@@ -2,10 +2,10 @@
 <div id="footer">
     <footer class="footer__box">
         <ul class="footer__list">
-            <li><a href="#">TOP</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">SERVICE</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a href="/">TOP</a></li>
+            <li><a href="/sample-page/about">ABOUT</a></li>
+            <li><a href="/sample-page/servise">SERVICE</a></li>
+            <li><a href="/sample-page/contact">CONTACT</a></li>
         </ul>
     </footer>
     <p class="footer__copyright">COPYRIGHT © L.WEB DESIGN</p>

@@ -30,7 +30,7 @@
 
         <div class="section2__Contact-Us-box">
             <p class="section2__Contact-Us-text">
-                <a href="#">
+                <a href="/sample-page/contact">
                     お問い合わせはコチラ
                 </a>
             </p>
@@ -70,7 +70,7 @@
 
         <div class="section2__service-link-box">
             <p class="section2__service-link-text">
-                <a href="#">
+                <a href="/sample-page/servise">
                 サービス内容の詳細
                 </a>
             </p>
@@ -87,13 +87,27 @@
         <p class="section3__text--3">住所： 埼玉県さいたま市</p>
         <p class="section3__text--4">ITグループ WillMake-inc会員</p>
         <div class="section3__link-box">
-            <p class="section3__link-text"><a href="#">詳細</a></p>
+            <p class="section3__link-text"><a href="/sample-page/about">詳細</a></p>
         </div>
     </div>
 
     <div id="section4">
         <h2 class="section4__title">WORKS.</h2>
         <h3 class="section4__sub-title">実績</h3>
+        <a href="/">
+        <div class="section4__box">
+            <div class="section4__box--title">
+                L.WEB DESIGN
+            </div>
+            <div class="section4__box--underline"></div>
+            <div class="section4__box--subtitle">
+                Milk tea is my energy source
+            </div>
+        </div>
+        </a>
+        <p class="section4__text">
+            L.WEB DESIGN
+        </p>
     </div>
 
     <div id="section5">
